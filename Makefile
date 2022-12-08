@@ -21,10 +21,10 @@ PATH_OBJ			= objs/
 
 HEADER				= 	data.h includes.h parser.h routine.h raycasting.h garbage.h utils.h
 SRC_PARSER			= 	parser.c
-SRC_ROUTINE			= 	routine.c
+SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c
 SRC_RAYTRACING		= 	raytracing.c
-SRC_GARBAGE			= 	garbage.c
-SRC_UTIL			= 	utils.c
+SRC_GARBAGE			= 	garbage.c free.c malloc.c
+SRC_UTIL			= 	utils.c get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c
 
 SRC_PARSERS			= $(addprefix $(PATH_PARSER),$(SRC_PARSER))
 SRC_ROUTINES		= $(addprefix $(PATH_ROUTINE),$(SRC_ROUTINE))
@@ -69,9 +69,6 @@ ifeq ($(DEBUG), 1)
 endif
 
 all			: $(NAME)
-
-test:
-	echo  $(HEADERS)
 
 $(PATH_OBJ)$(PATH_PARSER)%.o	: $(PATH_PARSER)%.c $(HEADERS)
 	@mkdir -p $(PATH_OBJ)$(PATH_PARSER)
