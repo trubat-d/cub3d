@@ -6,7 +6,7 @@ int	free_node(t_malloc *current)
 	if (current->content)
 		free(current->content);
 	current->content = NULL;
-	if (current)
+	if (!current)
 		free(current);
 	current = NULL;
 	return (0);
@@ -55,5 +55,31 @@ int	free_all(void)
 		current = tmp;
 	}
 	*root = NULL;
+	return (0);
+}
+
+int	free_mlx(void)
+{
+	t_data	*data;
+
+	data = get_data(NULL);
+	if (data->mlx.mlx && data->mlx.win)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.win);
+	if (data->mlx.mlx && data->mlx.map.no_img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.map.no_img.img);
+	if (data->mlx.mlx && data->mlx.map.so_img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.map.so_img.img);
+	if (data->mlx.mlx && data->mlx.map.we_img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.map.we_img.img);
+	if (data->mlx.mlx && data->mlx.map.ea_img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.map.ea_img.img);
+	if (data->mlx.mlx && data->mlx.map.map_img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.map.map_img.img);
+	if (data->mlx.mlx && data->mlx.player_pos.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.player_pos.img.img);
+	if (data->mlx.mlx && data->mlx.projection.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.projection.img.img);
+	if (data->mlx.mlx && data->mlx.background.img.img)
+		mlx_destroy_window(data->mlx.mlx, data->mlx.background.img.img);
 	return (0);
 }

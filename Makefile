@@ -20,11 +20,11 @@ PATH_UTIL			= src_util/
 PATH_OBJ			= objs/
 
 HEADER				= 	data.h includes.h parser.h routine.h raycasting.h garbage.h utils.h
-SRC_PARSER			= 	parser.c
+SRC_PARSER			= 	parser.c valid_arg.c
 SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c
 SRC_RAYTRACING		= 	raytracing.c
 SRC_GARBAGE			= 	garbage.c free.c malloc.c
-SRC_UTIL			= 	utils.c get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c
+SRC_UTIL			= 	utils.c get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c ft_putstr.c mlx_put_rec.c mlx_utils.c
 
 SRC_PARSERS			= $(addprefix $(PATH_PARSER),$(SRC_PARSER))
 SRC_ROUTINES		= $(addprefix $(PATH_ROUTINE),$(SRC_ROUTINE))
@@ -54,14 +54,14 @@ ifeq ($(UNAME), Linux)
 	LIBS			+= -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
 	OPTIONS			+= -Imlx_linux
 	PATH_MLX		= mlx_linux
-	MLX				= libmlx.dylib
+	MLX				= mlx_linux
 endif
 
 ifeq ($(UNAME), Darwin)
 	LIBS 			+= -Lmlx_macos -lmlx -framework OpenGL -framework AppKit
 	OPTIONS 		+= -Imlx_macos
 	PATH_MLX 		= mlx_macos
-	MLX				= libmlx.dylib
+	MLX				= mlx_macos
 endif
 
 ifeq ($(DEBUG), 1)
@@ -96,18 +96,18 @@ $(PATH_OBJ)$(PATH_UTIL)%.o		: $(PATH_UTIL)%.c $(HEADERS)
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_MAGENTA)DEBUG => [%s] $(COLOR_BOLD)UTIL\t\t=>\t$(COLOR_WHITE)%s$(COLOR_RESET)\n" $(DEBUG) $<
 
 $(MLX):
-	@make -C $(PATH_MLX) -s
-	@cp ./$(PATH_MLX)/$(MLX) ./$(MLX)
+	@make -C $(PATH_MLX)
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_CYAN)MLX$(COLOR_RESET)\n"
 
 $(NAME)		: $(MLX) $(OBJS)
-	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) $(^) $(LIBS)
+	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) $(OBJS) $(LIBS)
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] LINKAGE $(COLOR_BOLD)ALL OBJS FILE =>\n\t $(COLOR_WHITE)$(^:.o=.o\n\t)"
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION FINISH !$(COLOR_WHITE)$(COLOR_RESET_BOLD)"
 
 clean		:
 	@$(RM) $(OBJS)
 	@$(RM) $(PATH_OBJ)
+	@make -C $(PATH_MLX) clean
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] DELETE $(COLOR_BOLD)ALL OBJS FILE =>\n\t $(COLOR_WHITE)$(OBJS:.o=.o\n\t)"
 	@make -C $(PATH_MLX) clean
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] CLEAN MLX !$(COLOR_RESET)"
@@ -115,7 +115,7 @@ clean		:
 
 fclean		: clean
 	@$(RM) $(NAME)
-	@$(RM) $(MLX)
+	@$(RM) $(PATH_MLX)/libmlx.a
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] DELETE $(COLOR_BOLD)PROGRAMME =>\n\t $(COLOR_WHITE)$(NAME)"
 	@echo "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] FCLEAN FINISH !$(COLOR_RESET)"
 

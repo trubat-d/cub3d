@@ -5,9 +5,9 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="42_cube3d" targetName="libmlx.dylib" />
       <config projectName="42_cube3d" targetName="fclean" />
       <config projectName="42_cube3d" targetName="cube3d" />
+      <config projectName="42_cube3d" targetName="mlx_macos" />
       <config projectName="42_cube3d" targetName="all" />
       <config projectName="42_cube3d" targetName="re" />
     </generated>
@@ -19,38 +19,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/asset/NORD.xpm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map.cub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_garbage/malloc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_itoa.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_mem.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_split.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_str.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/42_cube3d.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_parser/valid_arg.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_util/ft_putstr.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_util/mlx_put_rec.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_util/mlx_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/data.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/data.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/garbage.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/garbage.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_garbage/garbage.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_garbage/garbage.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_parser/parser.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_parser/parser.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/routine.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_routine/routine.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/garbage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/garbage.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmlx.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/font.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/interface.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/interface.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_loop.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_new_image.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_new_window.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_pixel_put.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftmodule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftsourceinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftmodule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftsourceinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_rgb.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_string_put.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_string_put.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftdoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftmodule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftsourceinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_garbage/free.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_garbage/garbage.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_garbage/malloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_parser/parser.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_raytracing/raytracing.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_routine/init_mlx.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_routine/render_frame.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_routine/routine.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_mem.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_str.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/get_data.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/objs/src_util/utils.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/get_data.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/get_data.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_str.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_str.c" afterDir="false" />
     </list>
-    <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
-    </list>
+    <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,30 +142,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/jerdos-s/Documents/42_cube3d",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jerdos-s/Documents/42_cube3d&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/asset" />
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -146,7 +176,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="libmlx.dylib" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="libmlx.dylib" CONFIG_NAME="libmlx.dylib" version="1">
+    <configuration name="mlx_macos" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="mlx_macos" CONFIG_NAME="mlx_macos" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -171,7 +201,7 @@
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
-      <item itemvalue="Makefile Application.libmlx.dylib" />
+      <item itemvalue="Makefile Application.mlx_macos" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
       <item itemvalue="Makefile Target.all" />
@@ -195,7 +225,12 @@
       <workItem from="1670512119392" duration="63000" />
       <workItem from="1670512227511" duration="129000" />
       <workItem from="1670512431813" duration="35000" />
-      <workItem from="1670512476249" duration="7339000" />
+      <workItem from="1670512476249" duration="7719000" />
+      <workItem from="1670932440435" duration="3375000" />
+      <workItem from="1670943467913" duration="1594000" />
+      <workItem from="1670949598121" duration="6891000" />
+      <workItem from="1670963065500" duration="580000" />
+      <workItem from="1670970556102" duration="1486000" />
     </task>
     <servers />
   </component>

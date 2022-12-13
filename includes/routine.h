@@ -9,17 +9,19 @@ typedef struct s_img
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		width;
+	int		height;
 }	t_img;
 
 typedef struct s_map
 {
-	char	*NO;
-	char	*SO;
-	char	*WE;
-	char	*EA;
+	t_img	no_img;
+	t_img	so_img;
+	t_img	we_img;
+	t_img	ea_img;
 	int		col;
 	int		row;
-	t_img	img;
+	t_img	map_img;
 	int		**mapping;
 }	t_map;
 
@@ -35,6 +37,8 @@ typedef struct s_proj
 
 typedef struct s_bckg
 {
+	t_color	ceiling;
+	t_color	floor;
 	t_img	img;
 }	t_bckg;
 
@@ -50,6 +54,7 @@ typedef struct s_mlx
 
 struct s_data
 {
+	char		*file_map;
 	t_malloc	*garbage;
 	t_mlx		mlx;
 };
