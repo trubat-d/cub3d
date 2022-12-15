@@ -19,71 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src_parser/valid_arg.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_putstr.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/mlx_put_rec.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/mlx_utils.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/garbage.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/garbage.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libmlx.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/font.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/interface.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/interface.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_loop.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_new_image.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_new_window.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/man/man3/mlx_pixel_put.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftdoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftmodule" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_image.swiftsourceinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftdoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftmodule" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init.swiftsourceinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_rgb.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_string_put.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_string_put.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftdoc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftmodule" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_window.swiftsourceinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_garbage/free.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_garbage/garbage.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_garbage/malloc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_parser/parser.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_raytracing/raytracing.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/init_mlx.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/render_frame.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/routine.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_itoa.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_mem.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_split.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/ft_str.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/get_data.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_util/utils.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_str.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_str.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +166,11 @@
       <workItem from="1670943467913" duration="1594000" />
       <workItem from="1670949598121" duration="6891000" />
       <workItem from="1670963065500" duration="580000" />
-      <workItem from="1670970556102" duration="1486000" />
+      <workItem from="1670970556102" duration="1555000" />
+      <workItem from="1671040427833" duration="1270000" />
+      <workItem from="1671054613431" duration="1197000" />
+      <workItem from="1671069502521" duration="3000" />
+      <workItem from="1671113269553" duration="521000" />
     </task>
     <servers />
   </component>
