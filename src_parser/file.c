@@ -10,14 +10,20 @@ int open_file(int *fd, char *file)
 
 static int	get_path(char **res, char *buff)
 {
+	char	*pos;
+
 	while (*buff && *buff != '.')
 		buff++;
-	if (*buff)
+	if (!*buff)
 	{
-		*res = buff;
-		return (0);
+		ft_putstr_fd(2, "[ERROR]\tthe file is not relative path\n");
+		return (1);
 	}
-	return (1);
+	pos = ft_strchr(buff, '\n');
+	if (pos)
+		*pos = '\0';
+	*res = buff;
+	return (0);
 }
 
 int	open_image(char *buff)

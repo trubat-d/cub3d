@@ -18,25 +18,28 @@ PATH_PARSER			= src_parser/
 PATH_ROUTINE		= src_routine/
 PATH_RAYTRACING		= src_raytracing/
 PATH_GARBAGE		= src_garbage/
+PATH_MLX_UTILS		= src_mlxutils/
 PATH_UTIL			= src_util/
 PATH_OBJ			= objs/
 
 HEADER				= 	data.h includes.h parser.h routine.h raycasting.h garbage.h utils.h
-SRC_PARSER			= 	parser.c valid_arg.c
+SRC_PARSER			= 	parser.c valid_arg.c get_map.c file.c
 SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c
 SRC_RAYTRACING		= 	raytracing.c
 SRC_GARBAGE			= 	garbage.c free.c malloc.c
 SRC_UTIL			= 	get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c ft_putstr.c \
-						mlx_put_rec.c mlx_utils.c ft_atoi.c ft_is.c file.c ft_readline.c \
+						ft_atoi.c ft_is.c ft_readline.c \
 						ft_strjoin.c ft_strmem.c
+SRC_MLX_UTIL		=	mlx_put_rec.c mlx_utils.c
 
 SRC_PARSERS			= $(addprefix $(PATH_PARSER),$(SRC_PARSER))
 SRC_ROUTINES		= $(addprefix $(PATH_ROUTINE),$(SRC_ROUTINE))
 SRC_RAYTRACINGS		= $(addprefix $(PATH_RAYTRACING),$(SRC_RAYTRACING))
 SRC_GARBAGES		= $(addprefix $(PATH_GARBAGE),$(SRC_GARBAGE))
 SRC_UTILS			= $(addprefix $(PATH_UTIL),$(SRC_UTIL))
+SRC_MLX_UTILS		= $(addprefix $(PATH_MLX_UTILS),$(SRC_MLX_UTIL))
 
-SRCS 				= $(SRC_PARSERS) $(SRC_ROUTINES) $(SRC_RAYTRACINGS) $(SRC_GARBAGES) $(SRC_UTILS)
+SRCS 				= $(SRC_PARSERS) $(SRC_ROUTINES) $(SRC_RAYTRACINGS) $(SRC_GARBAGES) $(SRC_UTILS) $(SRC_MLX_UTILS)
 
 OBJ					= $(SRCS:.c=.o)
 OBJS				= $(addprefix $(PATH_OBJ),$(OBJ))
@@ -47,7 +50,7 @@ ifndef DEBUG
 endif
 
 DEBUGING			= -g3 -fsanitize=address
-CFLAGS				= -O3 -Wall -Wextra -Werror
+CFLAGS				= -Wall -Wextra -Werror
 
 
 OPTIONS				= -I$(PATH_HEADER)
@@ -73,6 +76,12 @@ endif
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += $(DEBUGING)
+endif
+
+ifndef OPTIMISATION_LEVEL
+	CFLAGS += -O$(OPTIMISATION_LEVEL)
+else
+	CFLAGS += -Ofast
 endif
 
 all			: $(NAME)
@@ -101,6 +110,12 @@ $(PATH_OBJ)$(PATH_UTIL)%.o		: $(PATH_UTIL)%.c $(HEADERS)
 	@mkdir -p $(PATH_OBJ)$(PATH_UTIL)
 	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) -c $(<)
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_MAGENTA)DEBUG => [%s] $(COLOR_BOLD)UTIL\t\t=>\t$(COLOR_WHITE)%s$(COLOR_RESET)\n" $(DEBUG) $<
+
+$(PATH_OBJ)$(PATH_MLX_UTILS)%.o		: $(PATH_MLX_UTILS)%.c $(HEADERS)
+	@mkdir -p $(PATH_OBJ)$(PATH_MLX_UTILS)
+	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) -c $(<)
+	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_CYAN)DEBUG => [%s] $(COLOR_BOLD)MLX UTIL\t\t=>\t$(COLOR_WHITE)%s$(COLOR_RESET)\n" $(DEBUG) $<
+
 
 $(MLX):
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_CYAN)MLX$(COLOR_RESET)\n"

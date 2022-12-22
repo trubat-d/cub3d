@@ -45,9 +45,6 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 int			ft_strncmp(char *a, char *b, size_t n);
 int			ft_atoi(char *current);
 int			size_nbr(int nbr);
-int			open_file(int *fd, char *file);
-int			open_image(char *buff);
-
 
 void		mlx_put_rec(t_img img, t_rec rec, t_color color);
 void		mlx_put_pixel(t_img img, int x, int y, int color);

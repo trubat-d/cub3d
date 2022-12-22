@@ -11,12 +11,12 @@
 
 @interface NSWindowEvent : NSWindow
 {
-  func_t	event_funct[MAX_EVENT];
-  void		*(event_param[MAX_EVENT]);
-  int		keyrepeat;
-  int		keyflag;
-  int		size_x;
-  int		size_y;
+	func_t	event_funct[MAX_EVENT];
+	void		*(event_param[MAX_EVENT]);
+	int		keyrepeat;
+	int		keyflag;
+	int		size_x;
+	int		size_y;
 }
 - (NSWindowEvent *) initWithContentRect:(NSRect)rect styleMask:(NSUInteger)winstyle backing:(NSBackingStoreType)bck defer:(BOOL) dfr;
 - (void) setEvent:(int)event andFunc:(func_t)func andParam:(void *)param;
@@ -28,18 +28,18 @@
 
 @interface MlxWin : NSOpenGLView
 {
-  NSWindowEvent		*win;
-  NSOpenGLContext	*ctx;
-  glsl_info_t		glsl;
-  int			openglwin;
+	NSWindowEvent		*win;
+	NSOpenGLContext	*ctx;
+	glsl_info_t		glsl;
+	int			openglwin;
 
-  int			size_x;
-  int			size_y;
+	int			size_x;
+	int			size_y;
 
-  int			pixel_nb;
-  GLuint		pixel_vbuffer;
-  GLuint		pixel_texture;
-  unsigned int		*pixtexbuff;
+	int			pixel_nb;
+	GLuint		pixel_vbuffer;
+	GLuint		pixel_texture;
+	unsigned int		*pixtexbuff;
 }
 
 - (id) initWithRect: (NSRect)rect andTitle: (NSString *)title pfaAttrs: (NSOpenGLPixelFormatAttribute *)attrs;

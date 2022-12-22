@@ -69,7 +69,7 @@ int	ft_readline(int fd, char **current_buff, char **current_line)
 {
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (1);
-	if (!ft_read_from_buff(current_buff, fd))
+	if (ft_read_from_buff(current_buff, fd))
 		return (1);
 	*current_line = ft_get_line(*current_buff);
 	if (ft_init_new_buff(current_buff))

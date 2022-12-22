@@ -68,14 +68,13 @@ static int	set_texture(int fd, char **buff)
 	return (0);
 }
 
-int set_map(int fd, char **buff)
+int	set_map(int fd, char **buff)
 {
-	char	*res;
+	char	**map;
 
-	while (!ft_readline(fd, buff, &res) && check_is_set(2))
-		del_malloc(res);
-	if (check_is_set(2))
+	if (get_map(fd, &map, buff))
 		return (1);
+	//TODO: PARSER MAP CHAR **
 	return (0);
 }
 

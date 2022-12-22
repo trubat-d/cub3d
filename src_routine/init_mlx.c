@@ -57,7 +57,7 @@ static int	parse_map(void)
 	return (0);
 }
 
-static int	create_map()
+static int	create_map(void)
 {
 	t_data	*data;
 
