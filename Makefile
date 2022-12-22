@@ -1,3 +1,5 @@
+include .env
+export
 NAME = cube3d
 
 COLOR_ESC			= \033
@@ -40,7 +42,10 @@ OBJ					= $(SRCS:.c=.o)
 OBJS				= $(addprefix $(PATH_OBJ),$(OBJ))
 HEADERS				= $(addprefix $(PATH_HEADER),$(HEADER))
 
-DEBUG				= 0
+ifndef DEBUG
+	DEBUG			= 0
+endif
+
 DEBUGING			= -g3 -fsanitize=address
 CFLAGS				= -O3 -Wall -Wextra -Werror
 
@@ -98,8 +103,8 @@ $(PATH_OBJ)$(PATH_UTIL)%.o		: $(PATH_UTIL)%.c $(HEADERS)
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_MAGENTA)DEBUG => [%s] $(COLOR_BOLD)UTIL\t\t=>\t$(COLOR_WHITE)%s$(COLOR_RESET)\n" $(DEBUG) $<
 
 $(MLX):
-	@make -C $(PATH_MLX)
 	@printf "$(COLOR_GREEN)[$(COLOR_WHITE)INFO$(COLOR_GREEN)] COMPILATION $(COLOR_CYAN)MLX$(COLOR_RESET)\n"
+	@make -C $(PATH_MLX)
 
 $(NAME)		: $(MLX) $(OBJS)
 	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) $(OBJS) $(LIBS)

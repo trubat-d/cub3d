@@ -6,10 +6,11 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="42_cube3d" targetName="fclean" />
-      <config projectName="42_cube3d" targetName="cube3d" />
       <config projectName="42_cube3d" targetName="mlx_macos" />
+      <config projectName="42_cube3d" targetName="cube3d" />
       <config projectName="42_cube3d" targetName="all" />
       <config projectName="42_cube3d" targetName="re" />
+      <config projectName="42_cube3d" targetName="Makefile" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -19,31 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src_util/file.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_atoi.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_is.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_readline.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_strjoin.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/ft_strmem.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/data.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/data.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.a" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/libmlx.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_garbage/garbage.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_garbage/garbage.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_parser/valid_arg.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_parser/valid_arg.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_raytracing/raytracing.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_raytracing/raytracing.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/render_frame.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_routine/render_frame.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objs/src_routine/routine.o" beforeDir="false" afterPath="$PROJECT_DIR$/objs/src_routine/routine.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_itoa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_mem.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_mem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_split.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_split.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_str.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_str.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/get_data.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/get_data.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/utils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init_loop.o" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_init_loop.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_image.o" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_new_image.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_window.o" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_new_window.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_shaders.o" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_shaders.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +101,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CLionExternalConfigurable&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
@@ -126,7 +111,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Makefile" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="Makefile" CONFIG_NAME="Makefile" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -146,14 +141,9 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="re" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="re" CONFIG_NAME="re" version="1">
+    <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -162,7 +152,7 @@
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
       <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="">
         <envs />
       </makefile>
@@ -174,12 +164,12 @@
       <item itemvalue="Makefile Application.mlx_macos" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
+      <item itemvalue="Makefile Application.Makefile" />
       <item itemvalue="Makefile Target.all" />
       <item itemvalue="Makefile Target.Makefile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.all" />
         <item itemvalue="Makefile Target.Makefile" />
       </list>
     </recent_temporary>
@@ -208,7 +198,8 @@
       <workItem from="1671647139456" duration="1612000" />
       <workItem from="1671650168622" duration="4282000" />
       <workItem from="1671663335506" duration="4228000" />
-      <workItem from="1671671817463" duration="1977000" />
+      <workItem from="1671671817463" duration="3059000" />
+      <workItem from="1671675125477" duration="605000" />
     </task>
     <servers />
   </component>
@@ -225,5 +216,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src_routine/routine.c</url>
+          <line>6</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

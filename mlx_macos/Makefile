@@ -14,9 +14,9 @@ CFLAGS+= -DSTRINGPUTX11
 all: $(NOM)
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -o $(@)  -c $(<)
+	@$(CC) $(CFLAGS) -o $(@)  -c $(<) -O3
 %.o: %.m
-	@$(CC) $(CFLAGS) -o $(@)  -c $(<)
+	@$(CC) $(CFLAGS) -o $(@)  -c $(<) -O3
 
 $(NOM):	$(OBJ)
 	@ar -r $(NOM) $(OBJ) 2>/dev/null
