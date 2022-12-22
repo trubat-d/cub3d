@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
@@ -194,7 +194,7 @@
       <workItem from="1671650168622" duration="4282000" />
       <workItem from="1671663335506" duration="4228000" />
       <workItem from="1671671817463" duration="3059000" />
-      <workItem from="1671675125477" duration="4750000" />
+      <workItem from="1671675125477" duration="4786000" />
     </task>
     <servers />
   </component>
