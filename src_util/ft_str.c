@@ -12,40 +12,27 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-int	ft_strdup(char **dst, char *src)
+size_t	ft_strlcat(char	*dst, const char *src, size_t size)
 {
+	size_t	i;
 	size_t	len;
 
-	len = ft_strlen(src);
-	if (ft_calloc((void **)dst, sizeof(char), len + 1)
-		|| ft_memcpy((void *)*dst, (void *)src, len))
-		return (1);
-	return (0);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*res;
-	size_t	i;
-	size_t	j;
-	size_t	len_str;
-
+	len = 0;
 	i = 0;
-	j = 0;
-	len_str = ft_strlen(s);
-	if (start > len_str)
-		len = 0;
-	else if (len >= len_str)
-		len = len_str - start;
-	if (ft_calloc((void **)&res, sizeof(char), len + 1))
-		return (NULL);
-	while (s[i])
+	while (len < size && dst[len] != '\0')
+		len++;
+	if (!src)
+		return (len);
+	while (len + i + 1 < size && src[i] != '\0')
 	{
-		if (i >= start && j < len)
-			res[j++] = s[i];
+		dst[len + i] = src[i];
 		i++;
 	}
-	return (res);
+	if (len + i < size)
+		dst[len + i] = '\0';
+	while (src[i] != '\0')
+		i++;
+	return (len + i);
 }
 
 int	ft_strncmp(char *a, char *b, size_t n)
@@ -62,4 +49,20 @@ int	ft_strncmp(char *a, char *b, size_t n)
 		i++;
 	}
 	return (0);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	char	*current;
+
+	current = (char *)s;
+	if (!current)
+		return (NULL);
+	while (*current != (char)c)
+	{
+		if (*current == '\0')
+			return (NULL);
+		current++;
+	}
+	return (current);
 }

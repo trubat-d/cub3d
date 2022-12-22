@@ -24,7 +24,9 @@ SRC_PARSER			= 	parser.c valid_arg.c
 SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c
 SRC_RAYTRACING		= 	raytracing.c
 SRC_GARBAGE			= 	garbage.c free.c malloc.c
-SRC_UTIL			= 	utils.c get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c ft_putstr.c mlx_put_rec.c mlx_utils.c
+SRC_UTIL			= 	get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c ft_putstr.c \
+						mlx_put_rec.c mlx_utils.c ft_atoi.c ft_is.c file.c ft_readline.c \
+						ft_strjoin.c ft_strmem.c
 
 SRC_PARSERS			= $(addprefix $(PATH_PARSER),$(SRC_PARSER))
 SRC_ROUTINES		= $(addprefix $(PATH_ROUTINE),$(SRC_ROUTINE))

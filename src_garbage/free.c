@@ -75,9 +75,9 @@ int	free_mlx(void)
 		mlx_destroy_window(data->mlx.mlx, data->mlx.map.ea_img.img);
 	if (data->mlx.mlx && data->mlx.map.map_img.img)
 		mlx_destroy_window(data->mlx.mlx, data->mlx.map.map_img.img);
-	if (data->mlx.mlx && data->mlx.player_pos.img)
+	if (data->mlx.mlx && data->mlx.player_pos.img.img)
 		mlx_destroy_window(data->mlx.mlx, data->mlx.player_pos.img.img);
-	if (data->mlx.mlx && data->mlx.projection.img)
+	if (data->mlx.mlx && data->mlx.projection.img.img)
 		mlx_destroy_window(data->mlx.mlx, data->mlx.projection.img.img);
 	if (data->mlx.mlx && data->mlx.background.img.img)
 		mlx_destroy_window(data->mlx.mlx, data->mlx.background.img.img);

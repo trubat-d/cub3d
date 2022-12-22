@@ -1,4 +1,3 @@
-
 #include "includes.h"
 
 static int	ft_is_separator(char c, char s)

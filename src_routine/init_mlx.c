@@ -75,7 +75,7 @@ static int	create_map()
 			&data->mlx.player_pos.img.bits_per_pixel,
 			&data->mlx.player_pos.img.line_length,
 			&data->mlx.player_pos.img.endian);
-	parse_map()
+	parse_map();
 	return (0);
 }
 
@@ -84,7 +84,6 @@ int	init_mlx(void)
 	t_data	*data;
 
 	data = get_data(NULL);
-	data->mlx.mlx = mlx_init();
 	data->mlx.win = mlx_new_window(data->mlx.mlx, WEIGHT, HEIGHT, NAME);
 	mlx_loop(data->mlx.mlx);
 	if (create_background() || create_map())
