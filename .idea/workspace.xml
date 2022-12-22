@@ -20,31 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init_loop.m" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_init_loop.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_int.h" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_int.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_int_str_to_wordtab.c" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_int_str_to_wordtab.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_mouse.m" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_mouse.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_image.m" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_new_image.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_window.h" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_new_window.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_window.m" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_new_window.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_opengl.m" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_opengl.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.c" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_png.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_shaders.c" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_shaders.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.c" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/mlx_xpm.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_readline.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_readline.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/mlx_put_rec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/mlx_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +194,7 @@
       <workItem from="1671650168622" duration="4282000" />
       <workItem from="1671663335506" duration="4228000" />
       <workItem from="1671671817463" duration="3059000" />
-      <workItem from="1671675125477" duration="4642000" />
+      <workItem from="1671675125477" duration="4750000" />
     </task>
     <servers />
   </component>
