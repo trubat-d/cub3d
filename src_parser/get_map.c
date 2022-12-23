@@ -10,6 +10,7 @@ static int	ft_strjoin_free(char **final, char *res)
 	del_malloc(*final);
 	del_malloc(res);
 	*final = tmp;
+	return (0);
 }
 
 int	get_map(int fd, char ***map, char **buff)
@@ -20,8 +21,12 @@ int	get_map(int fd, char ***map, char **buff)
 	(void)map;
 	final = NULL;
 	while (!ft_readline(fd, buff, &res))
-		ft_strjoin_free(&final, res);
+	{
+		if (ft_strjoin_free(&final, res))
+			return (1);
+	}
 	if (*buff)
-		ft_strjoin_free(&final, res);
+		if (ft_strjoin_free(&final, res))
+			return (1);
 	return (0);
 }

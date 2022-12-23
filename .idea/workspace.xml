@@ -3,14 +3,17 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="42_cube3d" targetName="fclean" />
-      <config projectName="42_cube3d" targetName="mlx_macos" />
       <config projectName="42_cube3d" targetName="cube3d" />
       <config projectName="42_cube3d" targetName="all" />
       <config projectName="42_cube3d" targetName="re" />
       <config projectName="42_cube3d" targetName="Makefile" />
+      <config projectName="42_cube3d" targetName="mlx_linux" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -20,8 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlx_linux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_init_loop.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_int_str_to_wordtab.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_mouse.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_image.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_new_window.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_png.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_shaders.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/mlx_xpm.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,24 +97,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jerdos-s/prog/42_cube3d&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CLionExternalConfigurable&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/onyx/Documents/prog/42_cube3d",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CLionExternalConfigurable",
+    "structure.view.defaults.are.configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src_mlxutils" />
@@ -106,6 +123,11 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Makefile" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="Makefile" CONFIG_NAME="Makefile" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -126,7 +148,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mlx_macos" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="mlx_macos" CONFIG_NAME="mlx_macos" version="1">
+    <configuration name="mlx_linux" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="mlx_linux" CONFIG_NAME="mlx_linux" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -134,11 +156,6 @@
     <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -156,7 +173,7 @@
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
-      <item itemvalue="Makefile Application.mlx_macos" />
+      <item itemvalue="Makefile Application.mlx_linux" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
       <item itemvalue="Makefile Application.Makefile" />
@@ -196,6 +213,7 @@
       <workItem from="1671671817463" duration="3059000" />
       <workItem from="1671675125477" duration="5599000" />
       <workItem from="1671682901543" duration="2151000" />
+      <workItem from="1671710630016" duration="1234000" />
     </task>
     <servers />
   </component>
@@ -212,5 +230,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src_parser/get_map.c</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
