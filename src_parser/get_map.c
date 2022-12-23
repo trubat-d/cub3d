@@ -18,15 +18,16 @@ int	get_map(int fd, char ***map, char **buff)
 	char	*final;
 	char	*res;
 
-	(void)map;
 	final = NULL;
 	while (!ft_readline(fd, buff, &res))
 	{
 		if (ft_strjoin_free(&final, res))
 			return (1);
+		del_malloc(res);
 	}
 	if (*buff)
-		if (ft_strjoin_free(&final, res))
+		if (ft_strjoin_free(&final, *buff))
 			return (1);
+	ft_split(map, final, '\n');
 	return (0);
 }

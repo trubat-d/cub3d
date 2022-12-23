@@ -95,7 +95,7 @@ int	init_map(void)
 		return (1);
 	if (set_map(fd, &buff))
 		return (1);
-	if (*buff)
+	if (buff)
 		del_malloc((void *)buff);
 	return (0);
 }
