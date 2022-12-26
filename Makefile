@@ -23,8 +23,8 @@ PATH_UTIL			= src_util/
 PATH_OBJ			= objs/
 
 HEADER				= 	data.h includes.h parser.h routine.h raycasting.h garbage.h utils.h
-SRC_PARSER			= 	parser.c valid_arg.c get_map.c file.c
-SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c
+SRC_PARSER			= 	parser.c valid_arg.c get_map.c file.c ft_strmap.c fill_map.c
+SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c key.c
 SRC_RAYTRACING		= 	raytracing.c
 SRC_GARBAGE			= 	garbage.c free.c malloc.c
 SRC_UTIL			= 	get_data.c ft_itoa.c ft_mem.c ft_split.c ft_str.c ft_putstr.c \
@@ -78,13 +78,12 @@ ifeq ($(DEBUG), 1)
 	CFLAGS += $(DEBUGING)
 endif
 
-OPTIMISATION_LEVEL = 3
-ifndef OPTIMISATION_LEVEL
-#	ifeq ($(OPTIMISATION_LEVEL),0)
+ifdef OPTIMISATION_LEVEL
+	ifeq ($(OPTIMISATION_LEVEL),0)
+		# Nothing
+	else
 		CFLAGS += -O$(OPTIMISATION_LEVEL)
-#	else
-#		CFLAGS += -O$(OPTIMISATION_LEVEL)
-#	endif
+	endif
 else
 	CFLAGS += -Ofast
 endif

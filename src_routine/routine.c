@@ -1,5 +1,6 @@
 #include "includes.h"
 
+//TODO:Create the hook
 int	main(int argc, char **argv)
 {
 	t_data	data;
@@ -13,8 +14,6 @@ int	main(int argc, char **argv)
 		free_all();
 		return (1);
 	}
-	mlx_loop_hook(data.mlx.mlx, render_frame, (void *) &data);
-	mlx_loop(data.mlx.mlx);
 	free_mlx();
 	free_all();
 	return (0);

@@ -72,9 +72,15 @@ int	set_map(int fd, char **buff)
 {
 	char	**map;
 
-	if (get_map(fd, &map, buff))
+	if (get_map(fd, &map, buff)
+		|| get_len_map(map)
+		|| parse_current_map(map)
+		|| free_map(map))
+	{
+		ft_putstr_fd(2, "[ERROR]\terror during parsing map\n");
+		free_map(map);
 		return (1);
-	//TODO: PARSER MAP CHAR **
+	}
 	return (0);
 }
 

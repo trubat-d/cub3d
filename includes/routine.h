@@ -28,6 +28,7 @@ typedef struct s_map
 typedef struct s_ppos
 {
 	t_img	img;
+	t_pos	pos;
 }	t_ppos;
 
 typedef struct s_proj
@@ -61,5 +62,7 @@ struct s_data
 
 int	init_mlx(void);
 int	render_frame(void *data);
+int	key_destroy(void *raw);
+int key_routine(int keycode, void *raw);
 
 #endif

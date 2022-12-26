@@ -85,6 +85,9 @@ int	init_mlx(void)
 
 	data = get_data(NULL);
 	data->mlx.win = mlx_new_window(data->mlx.mlx, WEIGHT, HEIGHT, NAME);
+	mlx_hook(data->mlx.win, 2, 1L << 0, key_routine, &data);
+	mlx_hook(data->mlx.win, 17, 0, key_destroy, &data);
+	mlx_loop_hook(data->mlx.mlx, render_frame, (void *) &data);
 	mlx_loop(data->mlx.mlx);
 	if (create_background() || create_map())
 	{
