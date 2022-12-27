@@ -21,7 +21,7 @@ static int	create_background(void)
 	rec.heigth = data->mlx.background.img.height / 2;
 	rec.width = data->mlx.background.img.width;
 	mlx_put_rec(data->mlx.background.img, rec, data->mlx.background.ceiling);
-	rec.pos.x = data->mlx.background.img.height / 2;
+	rec.pos.y = rec.heigth;
 	mlx_put_rec(data->mlx.background.img, rec, data->mlx.background.floor);
 	return (0);
 }
@@ -49,7 +49,7 @@ static int	parse_map(void)
 			rec.pos.x = x * MAP_SIZE;
 			rec.pos.y = y * MAP_SIZE;
 			mlx_put_rec(data->mlx.player_pos.img, rec,
-				color[data->mlx.map.mapping[x][y] + 1]);
+				color[data->mlx.map.mapping[y][x] + 1]);
 			x++;
 		}
 		y++;
@@ -87,12 +87,12 @@ int	init_mlx(void)
 	data->mlx.win = mlx_new_window(data->mlx.mlx, WEIGHT, HEIGHT, NAME);
 	mlx_hook(data->mlx.win, 2, 1L << 0, key_routine, &data);
 	mlx_hook(data->mlx.win, 17, 0, key_destroy, &data);
-	mlx_loop_hook(data->mlx.mlx, render_frame, (void *) &data);
-	mlx_loop(data->mlx.mlx);
 	if (create_background() || create_map())
 	{
 		free_mlx();
 		return (1);
 	}
+	mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
+	mlx_loop(data->mlx.mlx);
 	return (0);
 }

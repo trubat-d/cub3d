@@ -22,21 +22,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="Add parser and hook keycode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_atoi.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,6 +152,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="re" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="re" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
@@ -166,7 +165,13 @@
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
       <item itemvalue="Makefile Application.Makefile" />
+      <item itemvalue="Makefile Target.re" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.re" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -198,8 +203,16 @@
       <workItem from="1671710630016" duration="1234000" />
       <workItem from="1671836333318" duration="6126000" />
       <workItem from="1671880613543" duration="20641000" />
-      <workItem from="1672016669639" duration="4692000" />
+      <workItem from="1672016669639" duration="13551000" />
     </task>
+    <task id="LOCAL-00001" summary="Add parser and hook keycode">
+      <created>1672021479794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672021479794</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,12 +229,33 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add parser and hook keycode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add parser and hook keycode" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src_routine/render_frame.c</url>
+          <line>7</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src_routine/init_mlx.c</url>
+          <line>23</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
         <breakpoint enabled="true" type="javascript-exception" />
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CLionNativeAppRunConfigurationType">
+        <watch expression="data-&gt;mlx.background.ceiling.b" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

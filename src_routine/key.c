@@ -10,11 +10,8 @@ int	key_destroy(void *raw)
 
 int key_routine(int keycode, void *raw)
 {
-	t_data 	*data;
-
-	data = raw;
 	printf("value of keycode => %d\n", keycode);
-	(void)data;
-	(void)keycode;
+	if (keycode == 65307)
+		key_destroy(raw);
 	return (1);
 }

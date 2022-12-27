@@ -20,10 +20,8 @@ int	ft_atoi(char *current)
 	int		res;
 
 	res = 0;
-	while (*current && ft_isspace((int)*current))
+	while (*current && !ft_isdigit((int)*current))
 		current++;
-	if (*current == '-' || *current == '+')
-		return (-1);
 	while (*current != '\0' && ft_isdigit((int)*current))
 	{
 		res *= 10;

@@ -5,17 +5,17 @@ static int	set_color(char *buff)
 	t_color		color;
 	t_data		*data;
 
-	buff++;
 	data = get_data(NULL);
+	color = (t_color){};
 	color.r = ft_atoi(buff);
-	color.g = ft_atoi(buff + size_nbr(color.r) + 1);
-	color.b = ft_atoi(buff + size_nbr(color.r) + size_nbr(color.g) + 2);
+	color.g = ft_atoi(buff + size_nbr(color.r) + 2);
+	color.b = ft_atoi(buff + size_nbr(color.r) + size_nbr(color.g) + 3);
 	if (color.r == -1 || color.g == -1 || color.b == -1)
 		return (-1);
-	if (ft_strncmp("F", buff, 2))
-		data->mlx.background.floor = color;
-	if (ft_strncmp("C", buff, 2))
-		data->mlx.background.ceiling = color;
+	if (buff[0] == 'F')
+		ft_memcpy(&data->mlx.background.floor,  &color, sizeof(t_color));
+	else if (buff[0] == 'C')
+		ft_memcpy(&data->mlx.background.ceiling, &color, sizeof(t_color));
 	return (0);
 }
 
