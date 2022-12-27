@@ -36,8 +36,8 @@ static int	parse_map(void)
 
 	y = 0;
 	color[0] = (t_color){0, 125, 125, 125};
-	color[1] = (t_color){};
-	color[2] = (t_color){0, 255, 255, 255};
+	color[1] = (t_color){0, 255, 255, 255};
+	color[2] = (t_color){};
 	rec.width = MAP_SIZE;
 	rec.heigth = MAP_SIZE;
 	data = get_data(NULL);
@@ -62,6 +62,8 @@ static int	create_map(void)
 	t_data	*data;
 
 	data = get_data(NULL);
+	data->mlx.player_pos.pos_img.x = 10;
+	data->mlx.player_pos.pos_img.y = 10;
 	data->mlx.player_pos.img.height = data->mlx.map.row * MAP_SIZE;
 	data->mlx.player_pos.img.width = data->mlx.map.col * MAP_SIZE;
 	data->mlx.player_pos.img.img = mlx_new_image(

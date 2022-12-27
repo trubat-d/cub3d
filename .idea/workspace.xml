@@ -10,10 +10,10 @@
     <generated>
       <config projectName="42_cube3d" targetName="fclean" />
       <config projectName="42_cube3d" targetName="cube3d" />
+      <config projectName="42_cube3d" targetName="mlx_macos" />
       <config projectName="42_cube3d" targetName="all" />
       <config projectName="42_cube3d" targetName="re" />
       <config projectName="42_cube3d" targetName="Makefile" />
-      <config projectName="42_cube3d" targetName="mlx_linux" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -22,14 +22,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="Add parser and hook keycode">
+    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_util/rad.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/fill_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_atoi.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +57,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MakefileLocalSettings">
@@ -111,8 +120,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src_parser" />
       <recent name="$PROJECT_DIR$/src_mlxutils" />
+      <recent name="$PROJECT_DIR$/src_parser" />
       <recent name="$PROJECT_DIR$/asset" />
     </key>
   </component>
@@ -137,7 +146,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mlx_linux" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="mlx_linux" CONFIG_NAME="mlx_linux" version="1">
+    <configuration name="mlx_macos" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="mlx_macos" CONFIG_NAME="mlx_macos" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -152,8 +161,14 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="re" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="re" workingDirectory="" arguments="">
+    <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -161,15 +176,16 @@
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
-      <item itemvalue="Makefile Application.mlx_linux" />
+      <item itemvalue="Makefile Application.mlx_macos" />
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
       <item itemvalue="Makefile Application.Makefile" />
-      <item itemvalue="Makefile Target.re" />
+      <item itemvalue="Makefile Target.all" />
+      <item itemvalue="Makefile Target.Makefile" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.re" />
+        <item itemvalue="Makefile Target.Makefile" />
       </list>
     </recent_temporary>
   </component>
@@ -201,18 +217,9 @@
       <workItem from="1671675125477" duration="5599000" />
       <workItem from="1671682901543" duration="2151000" />
       <workItem from="1671710630016" duration="1234000" />
-      <workItem from="1671836333318" duration="6126000" />
-      <workItem from="1671880613543" duration="20641000" />
-      <workItem from="1672016669639" duration="13551000" />
+      <workItem from="1671818877521" duration="10000" />
+      <workItem from="1672161258376" duration="2646000" />
     </task>
-    <task id="LOCAL-00001" summary="Add parser and hook keycode">
-      <created>1672021479794</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1672021479794</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,33 +236,15 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add parser and hook keycode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add parser and hook keycode" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src_routine/render_frame.c</url>
-          <line>7</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src_routine/init_mlx.c</url>
-          <line>23</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src_parser/get_map.c</url>
+          <line>50</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
-        <breakpoint enabled="true" type="javascript-exception" />
-      </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CLionNativeAppRunConfigurationType">
-        <watch expression="data-&gt;mlx.background.ceiling.b" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

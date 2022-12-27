@@ -11,6 +11,6 @@ int		open_image(char *buff);
 int		free_map(char **map);
 int		parse_current_map(char **map);
 int		ft_strlen_map(char *map);
-void 	fill_map(int *tab, char *current_map, int y);
+void	fill_map(int *tab, char *current_map, int y);
 
 #endif

@@ -3,7 +3,8 @@
 # define NAME "cube3d"
 # define WEIGHT 1920
 # define HEIGHT 1080
-# define MAP_SIZE 10
+# define MAP_SIZE 20
+# define DEFAULT_FOV 90
 
 # include <unistd.h>
 # include <fcntl.h>
@@ -12,10 +13,10 @@
 # include <math.h>
 # include "data.h"
 # include "utils.h"
+# include "raycasting.h"
 # include "routine.h"
 # include "garbage.h"
 # include "mlx.h"
 # include "parser.h"
-# include "raycasting.h"
 
 #endif

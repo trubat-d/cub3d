@@ -50,5 +50,7 @@ void		mlx_put_rec(t_img img, t_rec rec, t_color color);
 void		mlx_put_pixel(t_img img, int x, int y, int color);
 int			create_color(t_color color);
 
+double		angle_to_rad(double angle);
+double		rad_to_angle(double rad);
 
 #endif

@@ -28,7 +28,8 @@ typedef struct s_map
 typedef struct s_ppos
 {
 	t_img	img;
-	t_pos	pos;
+	t_pos	pos_player;
+	t_pos	pos_img;
 }	t_ppos;
 
 typedef struct s_proj
@@ -58,6 +59,7 @@ struct s_data
 	char		*file_map;
 	t_malloc	*garbage;
 	t_mlx		mlx;
+	t_player	player;
 };
 
 int	init_mlx(void);

@@ -95,13 +95,16 @@ int	init_map(void)
 	data->mlx.mlx = mlx_init();
 	data->mlx.background.ceiling.b = -1;
 	data->mlx.background.floor.b = -1;
-	if (open_file(&fd, data->file_map))
-		return (1);
-	if (set_texture(fd, &buff))
-		return (1);
-	if (set_map(fd, &buff))
+	if (open_file(&fd, data->file_map)
+		|| set_texture(fd, &buff)
+		|| set_map(fd, &buff))
 		return (1);
 	if (buff)
 		del_malloc((void *)buff);
+	data->player.fov = DEFAULT_FOV;
+	data->player.projection.col = WEIGHT;
+	data->player.projection.row = HEIGHT;
+	data->player.current_pos.x = (double)data->mlx.player_pos.pos_player.x;
+	data->player.current_pos.y = (double)data->mlx.player_pos.pos_player.y;
 	return (0);
 }
