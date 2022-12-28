@@ -20,14 +20,16 @@ typedef struct	s_player
 {
 	t_posd	current_pos;
 	t_plane	projection;
-	double	current_angle;
-	int		pov;
+	double	pov;
 	int		fov;
-}
-t_player;
+}	t_player;
 
-float	find_short_len(double angle);
+double	get_len_pos(t_posd pos, double angle);
+double	find_short_len(double angle);
+void	get_first_horizontal(t_posd *pos, double angle, int neg);
+void	get_first_vertical(t_posd *pos, double angle, int neg);
 int		calc_projection_plane(void);
 int		raytracing_plane(void);
+int		is_on_grid(t_posd pos);
 
 #endif

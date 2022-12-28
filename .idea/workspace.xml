@@ -22,24 +22,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_util/rad.c" afterDir="false" />
+    <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_22,_12_34_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_22__12_34_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.excalidraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/fill_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +106,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CLionExternalConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
@@ -154,11 +146,6 @@
     <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -218,8 +205,24 @@
       <workItem from="1671682901543" duration="2151000" />
       <workItem from="1671710630016" duration="1234000" />
       <workItem from="1671818877521" duration="10000" />
-      <workItem from="1672161258376" duration="2646000" />
+      <workItem from="1672161258376" duration="2693000" />
+      <workItem from="1672171502361" duration="1000" />
+      <workItem from="1672174319943" duration="246000" />
+      <workItem from="1672177593272" duration="1000" />
+      <workItem from="1672233073634" duration="6000" />
+      <workItem from="1672237328973" duration="2286000" />
+      <workItem from="1672247514278" duration="5757000" />
+      <workItem from="1672254004410" duration="6512000" />
+      <workItem from="1672268079588" duration="1000" />
     </task>
+    <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
+      <created>1672171373940</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672171373940</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +238,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish parsing and add start raycasting" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish parsing and add start raycasting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
