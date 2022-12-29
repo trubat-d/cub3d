@@ -4,7 +4,7 @@
 # define WEIGHT 1920
 # define HEIGHT 1080
 # define MAP_SIZE 20
-# define DEFAULT_FOV 90
+# define DEFAULT_FOV 60
 
 # include <unistd.h>
 # include <fcntl.h>

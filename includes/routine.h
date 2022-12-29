@@ -22,6 +22,7 @@ typedef struct s_map
 	int		col;
 	int		row;
 	t_img	map_img;
+	t_pos	pos_img;
 	int		**mapping;
 }	t_map;
 
@@ -29,7 +30,6 @@ typedef struct s_ppos
 {
 	t_img	img;
 	t_pos	pos_player;
-	t_pos	pos_img;
 }	t_ppos;
 
 typedef struct s_proj
@@ -65,6 +65,7 @@ struct s_data
 int	init_mlx(void);
 int	render_frame(void *data);
 int	key_destroy(void *raw);
-int key_routine(int keycode, void *raw);
+int	key_routine(int keycode, void *raw);
+int	calc_new_position(void);
 
 #endif

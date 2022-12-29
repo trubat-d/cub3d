@@ -13,7 +13,7 @@ static int	set_color(char *buff)
 	if (color.r == -1 || color.g == -1 || color.b == -1)
 		return (-1);
 	if (buff[0] == 'F')
-		ft_memcpy(&data->mlx.background.floor,  &color, sizeof(t_color));
+		ft_memcpy(&data->mlx.background.floor, &color, sizeof(t_color));
 	else if (buff[0] == 'C')
 		ft_memcpy(&data->mlx.background.ceiling, &color, sizeof(t_color));
 	return (0);

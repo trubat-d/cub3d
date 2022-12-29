@@ -48,7 +48,7 @@ static int	parse_map(void)
 		{
 			rec.pos.x = x * MAP_SIZE;
 			rec.pos.y = y * MAP_SIZE;
-			mlx_put_rec(data->mlx.player_pos.img, rec,
+			mlx_put_rec(data->mlx.map.map_img, rec,
 				color[data->mlx.map.mapping[y][x] + 1]);
 			x++;
 		}
@@ -62,21 +62,21 @@ static int	create_map(void)
 	t_data	*data;
 
 	data = get_data(NULL);
-	data->mlx.player_pos.pos_img.x = 10;
-	data->mlx.player_pos.pos_img.y = 10;
-	data->mlx.player_pos.img.height = data->mlx.map.row * MAP_SIZE;
-	data->mlx.player_pos.img.width = data->mlx.map.col * MAP_SIZE;
-	data->mlx.player_pos.img.img = mlx_new_image(
+	data->mlx.map.pos_img.x = 10;
+	data->mlx.map.pos_img.y = 10;
+	data->mlx.map.map_img.height = data->mlx.map.row * MAP_SIZE;
+	data->mlx.map.map_img.width = data->mlx.map.col * MAP_SIZE;
+	data->mlx.map.map_img.img = mlx_new_image(
 			data->mlx.mlx,
-			data->mlx.player_pos.img.width,
-			data->mlx.player_pos.img.height);
-	if (!data->mlx.player_pos.img.img)
+			data->mlx.map.map_img.width,
+			data->mlx.map.map_img.height);
+	if (!data->mlx.map.map_img.img)
 		return (1);
-	data->mlx.player_pos.img.addr = mlx_get_data_addr(
-			data->mlx.player_pos.img.img,
-			&data->mlx.player_pos.img.bits_per_pixel,
-			&data->mlx.player_pos.img.line_length,
-			&data->mlx.player_pos.img.endian);
+	data->mlx.map.map_img.addr = mlx_get_data_addr(
+			data->mlx.map.map_img.img,
+			&data->mlx.map.map_img.bits_per_pixel,
+			&data->mlx.map.map_img.line_length,
+			&data->mlx.map.map_img.endian);
 	parse_map();
 	return (0);
 }

@@ -33,12 +33,12 @@ int	get_map(int fd, char ***map, char **buff)
 	return (0);
 }
 
-int get_len_map(char **map)
+int	get_len_map(char **map)
 {
 	t_data	*data;
-	int 	tmp_size;
-	int 	*x;
-	int 	*y;
+	int		tmp_size;
+	int		*x;
+	int		*y;
 
 	data = get_data(NULL);
 	x = &data->mlx.map.col;
@@ -57,7 +57,7 @@ int get_len_map(char **map)
 
 int parse_current_map(char **map)
 {
-	int 	y;
+	int		y;
 	t_data	*data;
 
 	y = 0;

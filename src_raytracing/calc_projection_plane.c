@@ -9,7 +9,7 @@ int	calc_projection_plane(void)
 
 	data = get_data(NULL);
 	len = (double)data->player.projection.col / 2.0;
-	angle_rad = tan(angle_to_rad(data->player.fov));
+	angle_rad = tan(angle_to_rad((double)data->player.fov / 2));
 	data->player.projection.distance = len / angle_rad;
 	angle_ray = (double)data->player.fov / data->player.projection.col;
 	data->player.projection.angle_betwen_ray = angle_ray;

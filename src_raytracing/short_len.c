@@ -10,8 +10,8 @@ static double	find_vertical_len(double angle)
 	neg = 1;
 	if (angle > 90 && angle < 270)
 		neg *= -1;
-	ya = HEIGHT / tan(angle_to_rad(angle));
-	xa = HEIGHT * neg;
+	ya = MAP_SIZE / tan(angle_to_rad(angle));
+	xa = MAP_SIZE * neg;
 	get_first_vertical(&current, angle, (neg < 0));
 	while (is_on_grid(current))
 	{
@@ -31,8 +31,8 @@ static double	find_horizontal_len(double angle)
 	neg = 1;
 	if (angle < 180)
 		neg *= -1;
-	xa = HEIGHT / tan(angle_to_rad(angle));
-	ya = HEIGHT * neg;
+	xa = MAP_SIZE / tan(angle_to_rad(angle));
+	ya = MAP_SIZE * neg;
 	get_first_horizontal(&current, angle, (neg < 0));
 	while (is_on_grid(current))
 	{

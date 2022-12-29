@@ -1,13 +1,12 @@
 #include "includes.h"
 
-void fill_map(int *tab, char *current_map, int y)
+void	fill_map(int *tab, char *current_map, int y)
 {
 	t_data	*data;
-	int 	tmp;
+	int		tmp;
 	int		str_x;
-	int 	fill_x;
+	int		fill_x;
 
-	tmp = 0;
 	str_x = 0;
 	fill_x = 0;
 	data = get_data(NULL);
@@ -26,14 +25,11 @@ void fill_map(int *tab, char *current_map, int y)
 		else if (current_map[str_x] == 'N')
 		{
 			tab[fill_x++] = 0;
-			data->mlx.player_pos.pos_player.x = str_x;
-			data->mlx.player_pos.pos_player.y = y;
+			data->mlx.player_pos.pos_player.y = str_x * MAP_SIZE + MAP_SIZE / 2;
+			data->mlx.player_pos.pos_player.x = y * MAP_SIZE + MAP_SIZE / 2;
 		}
 		str_x++;
 	}
 	while (fill_x < data->mlx.map.col)
-	{
 		tab[fill_x++] = -1;
-		str_x++;
-	}
 }
