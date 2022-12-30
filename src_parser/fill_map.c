@@ -25,8 +25,8 @@ void	fill_map(int *tab, char *current_map, int y)
 		else if (current_map[str_x] == 'N')
 		{
 			tab[fill_x++] = 0;
-			data->mlx.player_pos.pos_player.y = str_x * MAP_SIZE + MAP_SIZE / 2;
-			data->mlx.player_pos.pos_player.x = y * MAP_SIZE + MAP_SIZE / 2;
+			data->mlx.player_pos.pos_player.x = str_x * MAP_SIZE + MAP_SIZE / 2;
+			data->mlx.player_pos.pos_player.y = y * MAP_SIZE + MAP_SIZE / 2;
 		}
 		str_x++;
 	}

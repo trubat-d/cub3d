@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 # define UTILS_H
 # include "includes.h"
+# include "raycasting.h"
 
 struct s_color
 {
@@ -49,8 +50,13 @@ int			size_nbr(int nbr);
 void		mlx_put_rec(t_img img, t_rec rec, t_color color);
 void		mlx_put_pixel(t_img img, int x, int y, int color);
 int			create_color(t_color color);
+int			mlx_relative_point(double angle, double distance, t_posd current,
+				t_img img);
+int			mlx_print_point(t_posd current, t_img img, t_color color);
 
 double		angle_to_rad(double angle);
 double		rad_to_angle(double rad);
+double		absd(double a);
+
 
 #endif

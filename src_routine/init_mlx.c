@@ -37,17 +37,17 @@ static int	parse_map(void)
 	y = 0;
 	color[0] = (t_color){0, 125, 125, 125};
 	color[1] = (t_color){0, 255, 255, 255};
-	color[2] = (t_color){};
-	rec.width = MAP_SIZE;
-	rec.heigth = MAP_SIZE;
+	color[2] = (t_color){0, 50, 50, 50};
+	rec.width = MAP_SIZE - 2;
+	rec.heigth = MAP_SIZE - 2;
 	data = get_data(NULL);
 	while (y < data->mlx.map.row)
 	{
 		x = 0;
 		while (x < data->mlx.map.col)
 		{
-			rec.pos.x = x * MAP_SIZE;
-			rec.pos.y = y * MAP_SIZE;
+			rec.pos.x = x * MAP_SIZE + 1;
+			rec.pos.y = y * MAP_SIZE + 1;
 			mlx_put_rec(data->mlx.map.map_img, rec,
 				color[data->mlx.map.mapping[y][x] + 1]);
 			x++;

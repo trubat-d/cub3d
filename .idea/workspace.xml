@@ -23,21 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
+      <change afterPath="$PROJECT_DIR$/src_mlxutils/mlx_print_point.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src_util/math_utils.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.a" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/libmlx.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/fill_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/calc_new_position.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/calc_new_position.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/rad.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/rad.c" afterDir="false" />
     </list>
     <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,12 +125,13 @@
       <recent name="$PROJECT_DIR$/asset" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="expr 90 +45" />
+      <command value="expr 90 + 45" />
+    </option>
+  </component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Makefile" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="Makefile" CONFIG_NAME="Makefile" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -157,6 +160,11 @@
     <configuration name="re" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="re" CONFIG_NAME="re" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
@@ -231,7 +239,8 @@
       <workItem from="1672337140586" duration="384000" />
       <workItem from="1672337528706" duration="27000" />
       <workItem from="1672337569714" duration="7015000" />
-      <workItem from="1672348945245" duration="4130000" />
+      <workItem from="1672348945245" duration="4702000" />
+      <workItem from="1672358408853" duration="18161000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
@@ -265,19 +274,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src_raytracing/raytracing.c</url>
-          <line>32</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src_raytracing/short_len.c</url>
-          <line>45</line>
-          <option name="timeStamp" value="19" />
+          <line>17</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src_raytracing/raytracing.c</url>
-          <line>26</line>
-          <option name="timeStamp" value="22" />
+          <line>77</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -288,11 +292,6 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CLionNativeAppRunConfigurationType">
-        <watch expression="*(get_data(NULL)-&gt;mlx.map.mapping) @ 12" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

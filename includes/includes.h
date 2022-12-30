@@ -11,6 +11,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <math.h>
+# include <limits.h>
 # include "data.h"
 # include "utils.h"
 # include "raycasting.h"
