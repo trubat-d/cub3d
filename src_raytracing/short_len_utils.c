@@ -8,7 +8,7 @@ int	is_on_grid(t_posd pos, int n)
 	int		**map;
 
 	data = get_data(NULL);
-	color = (t_color){0, 0, 0, 255};
+	color = (t_color){0, 0, 0, 0};
 	if (n == 1)
 		color.r = 255;
 	else if (n == 2)
@@ -18,9 +18,11 @@ int	is_on_grid(t_posd pos, int n)
 	map_pos.y = (int)floor(pos.y / MAP_SIZE);
 	if (map_pos.y >= data->mlx.map.row
 		|| map_pos.x >= data->mlx.map.col
-		|| pos.y < 0
-		|| pos.x < 0)
+		|| map_pos.y < 0
+		|| map_pos.x < 0)
 		return (0);
+	if (map[map_pos.y][map_pos.x] != 0)
+		color.g = 255;
 	mlx_print_point((t_posd){pos.x, pos.y},
 		get_data(NULL)->mlx.player_pos.img,
 		color);

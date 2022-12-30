@@ -24,13 +24,13 @@ static void	draw_line(double current_line, int current_col)
 	len_line = MAP_SIZE / current_line;
 	len_line *= data->player.projection.distance;
 	rec.width = 1;
-	rec.heigth = (int)len_line / 100;
+	rec.heigth = (int)len_line;
 	//TODO: WHAT THE FUCK WHY IS NOT WORKING ??
 	//TODO: WHY IS SPLIT ON THE CENTER ?
 	//rec.heigth = MAP_SIZE * 10;
 	rec.pos.x = current_col;
-	rec.pos.y = (int)((HEIGHT - current_line) / 2);
-	//mlx_put_rec(data->mlx.projection.img, rec, (t_color){0, 20, 20, 20});
+	rec.pos.y = 0; //(int)((HEIGHT - rec.heigth) / 2);
+	mlx_put_rec(data->mlx.projection.img, rec, (t_color){0, 20, 20, 20});
 }
 
 static int	create_new_image(void)
@@ -69,28 +69,17 @@ int	raytracing_plane(void)
 	data = get_data(NULL);
 	if (create_new_image())
 		return (1);
-
-	int i;
-
-	i = 267;
-	while (i <= 360)
-	{
-		find_short_len(i);
-		i++;
-	}
-	return (0);
-
 	while (current_col < data->player.projection.col)
 	{
 		current_angle = data->player.projection.angle_betwen_ray * current_col;
 		fisheye = correct_fisheye(current_angle);
-		current_angle = (double)data->player.pov - ((double)data->player.fov / 2) + current_angle;
+		//current_angle = (double)data->player.pov - ((double)data->player.fov / 2) + current_angle;
 		if (current_angle < 0)
 			current_angle *= -1;
 		else
 			current_angle = 360 - current_angle;
 		current_len = find_short_len(current_angle);
-		current_len *= fisheye;
+//		current_len *= fisheye;
 		draw_line(current_len, current_col);
 		current_col++;
 	}
