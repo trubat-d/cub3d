@@ -1,6 +1,6 @@
 #include "includes.h"
 
-int	is_on_grid(t_posd pos, int n)
+int	is_on_grid(t_posd pos, int n, double angle)
 {
 	t_color	color;
 	t_pos	map_pos;
@@ -10,12 +10,21 @@ int	is_on_grid(t_posd pos, int n)
 	data = get_data(NULL);
 	color = (t_color){0, 0, 0, 0};
 	if (n == 1)
-		color.r = 255;
+		color.r = 0;
 	else if (n == 2)
-		color.b = 255;
+		color.b = 0;
 	map = data->mlx.map.mapping;
-	map_pos.x = (int)floor(pos.x / (double)MAP_SIZE);
-	map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
+	if (angle < 180 && angle > 0)
+		map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
+	else
+		map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
+	if (angle < 90 || angle > 270)
+		map_pos.x = (int)floor(pos.x / (double)MAP_SIZE);
+	else
+		map_pos.x = (int)ceil(pos.x / (double)MAP_SIZE);
+
+
+
 	if (map_pos.y >= data->mlx.map.row
 		|| map_pos.x >= data->mlx.map.col
 		|| map_pos.y < 0
@@ -45,7 +54,7 @@ void	get_first_horizontal(t_posd *pos, double angle)
 	t_data	*data;
 
 	data = get_data(NULL);
-	pos->y = data->player.current_pos.y / (double)MAP_SIZE;
+	pos->y = floor(data->player.current_pos.y / (double)MAP_SIZE);
 	pos->y *= MAP_SIZE;
 	if (angle < 180 && angle > 0)
 		pos->y -= 1;
@@ -61,7 +70,7 @@ void	get_first_vertical(t_posd *pos, double angle)
 	t_data	*data;
 
 	data = get_data(NULL);
-	pos->x = floor(data->player.current_pos.x / MAP_SIZE);
+	pos->x = floor(data->player.current_pos.x / (double)MAP_SIZE);
 	pos->x *= MAP_SIZE;
 	if (angle > 90 && angle < 270)
 		pos->x -= 1;
