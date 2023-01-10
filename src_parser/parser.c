@@ -102,7 +102,7 @@ int	init_map(void)
 	if (buff)
 		del_malloc((void *)buff);
 	data->player.fov = DEFAULT_FOV;
-	data->player.projection.col = WEIGHT;
+	data->player.projection.col = WIDTH;
 	data->player.projection.row = HEIGHT;
 	data->player.current_pos.x = (double)data->mlx.player_pos.pos_player.x;
 	data->player.current_pos.y = (double)data->mlx.player_pos.pos_player.y;

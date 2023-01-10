@@ -8,7 +8,7 @@ static int	create_background(void)
 	rec.pos = (t_pos){};
 	data = get_data(NULL);
 	data->mlx.background.img.img = mlx_new_image(
-			data->mlx.mlx, WEIGHT, HEIGHT);
+			data->mlx.mlx, WIDTH, HEIGHT);
 	if (!data->mlx.background.img.img)
 		return (1);
 	data->mlx.background.img.addr = mlx_get_data_addr(
@@ -17,7 +17,7 @@ static int	create_background(void)
 			&data->mlx.background.img.line_length,
 			&data->mlx.background.img.endian);
 	data->mlx.background.img.height = HEIGHT;
-	data->mlx.background.img.width = WEIGHT;
+	data->mlx.background.img.width = WIDTH;
 	rec.heigth = data->mlx.background.img.height / 2;
 	rec.width = data->mlx.background.img.width;
 	mlx_put_rec(data->mlx.background.img, rec, data->mlx.background.ceiling);
@@ -86,7 +86,7 @@ int	init_mlx(void)
 	t_data	*data;
 
 	data = get_data(NULL);
-	data->mlx.win = mlx_new_window(data->mlx.mlx, WEIGHT, HEIGHT, NAME);
+	data->mlx.win = mlx_new_window(data->mlx.mlx, WIDTH, HEIGHT, NAME);
 	mlx_hook(data->mlx.win, 2, 1L << 0, key_routine, &data);
 	mlx_hook(data->mlx.win, 17, 0, key_destroy, &data);
 	if (create_background() || create_map())
@@ -94,7 +94,8 @@ int	init_mlx(void)
 		free_mlx();
 		return (1);
 	}
-	mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
+	render_frame(data);
+	//mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
 	mlx_loop(data->mlx.mlx);
 	return (0);
 }

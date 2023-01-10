@@ -24,7 +24,7 @@ typedef struct	s_player
 	int		fov;
 }	t_player;
 
-double	get_len_pos(t_posd pos, double angle);
+double	get_len_pos(t_posd pos);
 double	find_short_len(double angle);
 void	get_first_horizontal(t_posd *pos, double angle);
 void	get_first_vertical(t_posd *pos, double angle);

@@ -1,7 +1,7 @@
 #ifndef INCLUDES_H
 # define INCLUDES_H
 # define NAME "cube3d"
-# define WEIGHT 1920
+# define WIDTH 1920
 # define HEIGHT 1080
 # define MAP_SIZE 20
 # define DEFAULT_FOV 90

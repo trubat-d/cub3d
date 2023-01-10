@@ -23,20 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
-      <change afterPath="$PROJECT_DIR$/.idea/42_cube3d.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_22,_4_04_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_22__4_04_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_22_8_30_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_23_22_8_30_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_22,_12_34_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_27_22__12_34_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.a" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/libmlx.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
     </list>
-    <list id="45add971-37f8-403a-b444-2998439ef8ca" name="Changes by trubat-d" comment="" />
+    <list id="92805096-984a-4407-9245-e5bcc1fa6824" name="Changes by trubat-d" comment="">
+      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +58,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src_routine/init_mlx.c">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="11" changelist="92805096-984a-4407-9245-e5bcc1fa6824" />
+        <range start1="19" end1="20" start2="19" end2="20" changelist="92805096-984a-4407-9245-e5bcc1fa6824" />
+        <range start1="88" end1="89" start2="88" end2="89" changelist="92805096-984a-4407-9245-e5bcc1fa6824" />
+        <range start1="96" end1="97" start2="96" end2="98" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+      </ranges>
+    </file>
   </component>
   <component name="MakefileLocalSettings">
     <option name="availableProjects">
@@ -104,7 +119,8 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/onyx/Documents/prog/42_cube3d",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "/Users/jerdos-s/prog/42_cube3d",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -237,7 +253,12 @@
       <workItem from="1672337569714" duration="7015000" />
       <workItem from="1672348945245" duration="4702000" />
       <workItem from="1672358408853" duration="18782000" />
-      <workItem from="1672420935950" duration="4670000" />
+      <workItem from="1672420935950" duration="4919000" />
+      <workItem from="1672678104953" duration="81000" />
+      <workItem from="1672684518962" duration="100000" />
+      <workItem from="1672705778836" duration="546000" />
+      <workItem from="1672946755233" duration="6000" />
+      <workItem from="1673359194018" duration="9879000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
@@ -282,8 +303,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src_raytracing/raytracing.c</url>
-          <line>25</line>
-          <option name="timeStamp" value="55" />
+          <line>72</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
