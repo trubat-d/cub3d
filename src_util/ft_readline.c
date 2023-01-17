@@ -1,7 +1,7 @@
 #include "includes.h"
 #define BUFFER_SIZE 100
 
-int	ft_read_from_buff(char **current_buff, int fd)
+static int	ft_read_from_buff(char **current_buff, int fd)
 {
 	char	*tmp;
 	char	*res;
@@ -15,15 +15,11 @@ int	ft_read_from_buff(char **current_buff, int fd)
 	{
 		len = read(fd, buff, BUFFER_SIZE);
 		if (len < 0 || (ft_strlen(res) == 0 && len == 0))
-		{
-			del_malloc(buff);
-			return (1);
-		}
+			return (del_malloc(buff) + 1);
 		if (len == 0)
 			break ;
 		buff[len] = '\0';
-		if (ft_strjoin(&tmp, res, buff))
-			return (1);
+		ft_strjoin(&tmp, res, buff);
 		res = tmp;
 		del_malloc(*current_buff);
 		*current_buff = res;
@@ -32,7 +28,7 @@ int	ft_read_from_buff(char **current_buff, int fd)
 	return (0);
 }
 
-int	ft_init_new_buff(char **buff)
+static int	ft_init_new_buff(char **buff)
 {
 	char	*end;
 	char	*tmp;
@@ -76,6 +72,3 @@ int	ft_readline(int fd, char **current_buff, char **current_line)
 		return (1);
 	return (0);
 }
-
-
-

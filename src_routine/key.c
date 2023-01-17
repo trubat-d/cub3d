@@ -8,7 +8,7 @@ int	key_destroy(void *raw)
 	exit(0);
 }
 
-static	void	check_mov(angle)
+static	void	check_mov(double angle)
 {
 	double	new_angle;
 	t_data	*data;

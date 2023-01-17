@@ -23,30 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/garbage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/garbage.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_print_point.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_print_point.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/ft_strmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/ft_strmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_parser/valid_arg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/valid_arg.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/calc_new_position.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/calc_new_position.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/math_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/math_utils.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_atoi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_is.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_is.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_itoa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_putstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_putstr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/ft_readline.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_readline.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +116,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
     "structure.view.defaults.are.configured": "true"
   },
   "keyToStringList": {
@@ -285,7 +270,7 @@
       <workItem from="1673881362876" duration="603000" />
       <workItem from="1673882838199" duration="746000" />
       <workItem from="1673901655225" duration="310000" />
-      <workItem from="1673958784955" duration="30011000" />
+      <workItem from="1673958784955" duration="30496000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
