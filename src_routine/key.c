@@ -42,7 +42,6 @@ static void	moove(int keycode)
 
 int	key_routine(int keycode, t_data *data)
 {
-	printf("current keycode => %d\n", keycode);
 	if (keycode == 12)
 		data->player.fov += 1;
 	if (keycode == 14)

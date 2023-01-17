@@ -13,6 +13,7 @@
       <config projectName="42_cube3d" targetName="mlx_macos" />
       <config projectName="42_cube3d" targetName="all" />
       <config projectName="42_cube3d" targetName="re" />
+      <config projectName="42_cube3d" targetName="test" />
       <config projectName="42_cube3d" targetName="Makefile" />
     </generated>
   </component>
@@ -23,15 +24,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
+      <change afterPath="$PROJECT_DIR$/.idea/customTargets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/fill_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/render_frame.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/render_frame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_atoi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_is.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_is.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_itoa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_putstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_putstr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_util/ft_readline.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/ft_readline.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "structure.view.defaults.are.configured": "true"
   },
   "keyToStringList": {
@@ -171,20 +172,18 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
+    <configuration name="test" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="test" CONFIG_NAME="test" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="all" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="fclean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="fclean" workingDirectory="" arguments="">
+    <configuration name="test" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -196,14 +195,12 @@
       <item itemvalue="Makefile Application.re" />
       <item itemvalue="Makefile Application.cube3d" />
       <item itemvalue="Makefile Application.Makefile" />
-      <item itemvalue="Makefile Target.all" />
-      <item itemvalue="Makefile Target.fclean" />
-      <item itemvalue="Makefile Target.Makefile" />
+      <item itemvalue="Makefile Application.test" />
+      <item itemvalue="Makefile Target.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.fclean" />
-        <item itemvalue="Makefile Target.Makefile" />
+        <item itemvalue="Makefile Target.test" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +267,9 @@
       <workItem from="1673881362876" duration="603000" />
       <workItem from="1673882838199" duration="746000" />
       <workItem from="1673901655225" duration="310000" />
-      <workItem from="1673958784955" duration="30496000" />
+      <workItem from="1673958784955" duration="30862000" />
+      <workItem from="1673992315708" duration="135000" />
+      <workItem from="1673992455546" duration="1336000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
@@ -300,7 +299,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

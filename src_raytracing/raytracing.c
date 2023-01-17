@@ -56,6 +56,23 @@ static int	create_new_image(void)
 	return (0);
 }
 
+static void	calc_angle(double *current_angle, t_data *data)
+{
+	double	tmp;
+
+	tmp = (double)data->player.pov - ((double)data->player.fov / 2);
+	*current_angle = tmp + *current_angle;
+	if (*current_angle < 0)
+		*current_angle = 360 + *current_angle;
+	if (*current_angle >= 360)
+		*current_angle = *current_angle - 360;
+	if (*current_angle != data->player.pov)
+		mlx_relative_point_map(*current_angle,
+			MAP_SIZE * 2,
+			data->player.current_pos,
+			(t_color){0, 46, 204, 113});
+}
+
 int	raytracing_plane(void)
 {
 	t_data	*data;
@@ -68,21 +85,11 @@ int	raytracing_plane(void)
 	data = get_data(NULL);
 	if (create_new_image())
 		return (1);
-	printf("valu of current angle of pov => %f\n", data->player.pov);
 	while (current_col < data->player.projection.col)
 	{
-	current_angle = data->player.projection.angle_betwen_ray * current_col;
+		current_angle = data->player.projection.angle_betwen_ray * current_col;
 		fisheye = correct_fisheye(current_angle);
-		current_angle = (double)data->player.pov - ((double)data->player.fov / 2) + current_angle;
-		if (current_angle < 0)
-			current_angle = 360 + current_angle;
-		if (current_angle >= 360)
-			current_angle = current_angle - 360;
-		if (current_angle != data->player.pov)
-			mlx_relative_point_map(current_angle,
-				MAP_SIZE * 2,
-				data->player.current_pos,
-				(t_color){0, 46, 204, 113});
+		calc_angle(&current_angle, data);
 		current_len = find_short_len(current_angle);
 		mlx_relative_point_map(current_angle,
 			current_len,

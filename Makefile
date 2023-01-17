@@ -90,6 +90,9 @@ endif
 
 all			: $(NAME)
 
+test:
+	echo $(UNAME)
+
 $(PATH_OBJ)$(PATH_PARSER)%.o	: $(PATH_PARSER)%.c $(HEADERS)
 	@mkdir -p $(PATH_OBJ)$(PATH_PARSER)
 	@$(CC) $(CFLAGS) $(OPTIONS) -o $(@) -c $(<)

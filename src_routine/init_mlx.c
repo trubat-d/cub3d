@@ -26,24 +26,17 @@ static int	create_background(void)
 	return (0);
 }
 
-static int	parse_map(void)
+static int	parse_map(t_color color[3])
 {
-	t_color	color[3];
 	t_data	*data;
 	t_rec	rec;
 	int		x;
 	int		y;
 
 	y = 0;
-	color[0] = (t_color){0, 125, 125, 125};
-	color[1] = (t_color){0, 255, 255, 255};
-	color[2] = (t_color){0, 50, 50, 50};
 	rec.width = MAP_SIZE - 2;
 	rec.heigth = MAP_SIZE - 2;
 	data = get_data(NULL);
-	mlx_put_rec(data->mlx.map.map_img,
-		(t_rec){{0, 0}, data->mlx.map.map_img.width, data->mlx.map.map_img.height},
-		(t_color){0, 200, 200, 200});
 	while (y < data->mlx.map.row)
 	{
 		x = 0;
@@ -80,7 +73,12 @@ static int	create_map(void)
 			&data->mlx.map.map_img.bits_per_pixel,
 			&data->mlx.map.map_img.line_length,
 			&data->mlx.map.map_img.endian);
-	parse_map();
+	mlx_put_rec(data->mlx.map.map_img,
+		(t_rec){{0, 0}, data->mlx.map.map_img.width,
+		data->mlx.map.map_img.height},
+		(t_color){0, 200, 200, 200});
+	parse_map((t_color[3]){{0, 125, 125, 125},
+	{0, 255, 255, 255}, {0, 50, 50, 50}});
 	return (0);
 }
 
