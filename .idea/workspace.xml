@@ -25,22 +25,28 @@
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cube3d" beforeDir="false" afterPath="$PROJECT_DIR$/cube3d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/routine.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/routine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlx_macos/libmlx.a" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/libmlx.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_garbage/garbage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/garbage.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_print_point.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_print_point.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_put_rec.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/ft_strmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/ft_strmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/valid_arg.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/valid_arg.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/calc_projection_plane.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len_utils.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/calc_new_position.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/calc_new_position.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_routine/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/key.c" afterDir="false" />
-    </list>
-    <list id="92805096-984a-4407-9245-e5bcc1fa6824" name="Changes by trubat-d" comment="">
-      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_util/math_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_util/math_utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +65,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src_raytracing/short_len.c">
-      <ranges>
-        <range start1="14" end1="15" start2="14" end2="15" changelist="92805096-984a-4407-9245-e5bcc1fa6824" />
-        <range start1="17" end1="21" start2="17" end2="21" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
-        <range start1="40" end1="42" start2="40" end2="42" changelist="92805096-984a-4407-9245-e5bcc1fa6824" />
-        <range start1="43" end1="47" start2="43" end2="47" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
-      </ranges>
-    </file>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="015337f4-a1cc-4bce-bb4d-aa557710156a" />
+        <option name="url" value="git@github.com:0xOnyx/42_cube3d.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MakefileLocalSettings">
     <option name="availableProjects">
@@ -109,6 +113,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -280,7 +285,7 @@
       <workItem from="1673881362876" duration="603000" />
       <workItem from="1673882838199" duration="746000" />
       <workItem from="1673901655225" duration="310000" />
-      <workItem from="1673958784955" duration="13115000" />
+      <workItem from="1673958784955" duration="30011000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
@@ -322,13 +327,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src_raytracing/raytracing.c</url>
-          <line>71</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

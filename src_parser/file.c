@@ -1,6 +1,6 @@
 #include "includes.h"
 
-int open_file(int *fd, char *file)
+int	open_file(int *fd, char *file)
 {
 	*fd = open(file, O_RDONLY);
 	if (*fd < 0)
@@ -39,12 +39,7 @@ int	open_image(char *buff)
 	current_img.img = mlx_xpm_file_to_image(data->mlx.mlx,
 			path, &current_img.width, &current_img.height);
 	if (!current_img.img)
-	{
-		ft_putstr_fd(2, "[ERROR]\terror to open file");
-		ft_putstr_fd(2, path);
-		ft_putstr_fd(2, "\n");
-		return (1);
-	}
+		return ((int)ft_putstr_fd(2, "[ERROR]\terror to open file\n"));
 	if (!ft_strncmp("NO", buff, 2))
 		data->mlx.map.no_img = current_img;
 	if (!ft_strncmp("SO", buff, 2))

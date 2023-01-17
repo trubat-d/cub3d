@@ -15,10 +15,7 @@ static double	find_vertical_len(double angle)
 	if (angle > 90 && angle < 270)
 		xa *= -1;
 	get_first_vertical(&current, angle);
-//	mlx_print_point((t_posd){current.x, current.y},
-//		get_data(NULL)->mlx.player_pos.img,
-//		(t_color){0, 255, 255, 0});
-	while (is_on_grid(current, 1))
+	while (is_on_grid(current))
 	{
 		current.x = current.x + xa;
 		current.y = current.y + ya;
@@ -41,10 +38,7 @@ static double	find_horizontal_len(double angle)
 	if (angle > 180 && angle < 360)
 		xa = -xa;
 	get_first_horizontal(&current, angle);
-//	mlx_print_point((t_posd){current.x, current.y},
-//		get_data(NULL)->mlx.player_pos.img,
-//		(t_color){0, 255, 0, 0});
-	while (is_on_grid(current, 2))
+	while (is_on_grid(current))
 	{
 		current.x = current.x + xa;
 		current.y = current.y + ya;
@@ -60,5 +54,5 @@ double	find_short_len(double angle)
 	horizontal_len = absd(find_horizontal_len(angle));
 	vertical_len = absd(find_vertical_len(angle));
 	return ((vertical_len < horizontal_len) * vertical_len
-		+ (vertical_len >= horizontal_len) * horizontal_len);
+		+ (vertical_len > horizontal_len) * horizontal_len);
 }

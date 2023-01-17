@@ -65,7 +65,7 @@ struct s_data
 int	init_mlx(void);
 int	render_frame(void *data);
 int	key_destroy(void *raw);
-int	key_routine(int keycode, void *raw);
+int	key_routine(int keycode, t_data *data);
 int	calc_new_position(void);
 
 #endif

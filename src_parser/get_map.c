@@ -55,18 +55,20 @@ int	get_len_map(char **map)
 	return (0);
 }
 
-int parse_current_map(char **map)
+int	parse_current_map(char **map)
 {
 	int		y;
 	t_data	*data;
 
 	y = 0;
 	data = get_data(NULL);
-	if (ft_calloc((void **)&data->mlx.map.mapping, sizeof(int *), data->mlx.map.row))
+	if (ft_calloc((void **)&data->mlx.map.mapping,
+			sizeof(int *), data->mlx.map.row))
 		return (1);
 	while (y < data->mlx.map.row)
 	{
-		if (ft_calloc((void **)&data->mlx.map.mapping[y], sizeof(int), data->mlx.map.col))
+		if (ft_calloc((void **)&data->mlx.map.mapping[y],
+				sizeof(int), data->mlx.map.col))
 			return (1);
 		fill_map(data->mlx.map.mapping[y], map[y], y);
 		y++;

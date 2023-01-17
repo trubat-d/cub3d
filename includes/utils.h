@@ -59,6 +59,7 @@ int			mlx_print_point(t_posd current, t_img img, t_color color);
 double		angle_to_rad(double angle);
 double		rad_to_angle(double rad);
 double		absd(double a);
+double		max_angle(double angle);
 
 
 #endif

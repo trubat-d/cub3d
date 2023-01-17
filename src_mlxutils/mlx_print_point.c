@@ -7,10 +7,8 @@ int	mlx_relative_point_map(double angle, double distance, t_posd current,
 	double	opp;
 	double	adj;
 	t_rec	rec;
-	t_img	img;
 
 	size = 10;
-	img = get_data(NULL)->mlx.player_pos.img;
 	opp = absd(sin(angle_to_rad(angle)) * distance);
 	adj = absd(cos(angle_to_rad(angle)) * distance);
 	if (angle < 180 && angle > 0)
@@ -28,21 +26,19 @@ int	mlx_relative_point_map(double angle, double distance, t_posd current,
 		rec.pos.y -= (int)(MAP_SIZE / (size * 2));
 	rec.heigth = MAP_SIZE / size;
 	rec.width = MAP_SIZE / size;
-	mlx_put_rec(img, rec, color);
+	mlx_put_rec(get_data(NULL)->mlx.player_pos.img, rec, color);
 	return (0);
-
 }
+
 int	mlx_relative_point(double angle, double distance, t_posd current,
 		t_img img)
 {
-	t_color	color;
 	double	opp;
 	double	adj;
 	t_rec	rec;
 
 	if (!img.img)
 		return (1);
-	color = (t_color){0, 243, 156, 18};
 	opp = absd(sin(angle_to_rad(angle)) * distance);
 	adj = absd(cos(angle_to_rad(angle)) * distance);
 	if (angle < 180 && angle > 0)
@@ -60,7 +56,7 @@ int	mlx_relative_point(double angle, double distance, t_posd current,
 		rec.pos.y -= (int)(MAP_SIZE / (5 * 2));
 	rec.heigth = MAP_SIZE / 5;
 	rec.width = MAP_SIZE / 5;
-	mlx_put_rec(img, rec, color);
+	mlx_put_rec(img, rec, (t_color){0, 243, 156, 18});
 	return (0);
 }
 
@@ -70,7 +66,7 @@ int	mlx_print_point(t_posd current, t_img img, t_color color)
 	t_rec	rec;
 	int		size;
 
-	size = 10;
+	size = 20;
 	if (!img.img)
 		return (1);
 	data = get_data(NULL);

@@ -97,7 +97,8 @@ int	init_mlx(void)
 		free_mlx();
 		return (1);
 	}
-	mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
+	data->player.pov = 90;
+	render_frame(data);
 	mlx_loop(data->mlx.mlx);
 	return (0);
 }

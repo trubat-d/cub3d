@@ -1,6 +1,5 @@
 #include "includes.h"
 
-//TODO:Create the hook
 int	main(int argc, char **argv)
 {
 	t_data	data;

@@ -8,12 +8,47 @@ int	key_destroy(void *raw)
 	exit(0);
 }
 
-int	key_routine(int keycode, void *raw)
+static	void	check_mov(angle)
 {
+	double	new_angle;
 	t_data	*data;
+	t_posd	pos;
+	t_posd	test_pos;
 
-	data = (t_data *)raw;
-	printf("value of keycode => %d\n", keycode);
+	data = get_data(NULL);
+	new_angle = max_angle(data->player.pov + angle);
+	pos.x = cos(angle_to_rad(new_angle)) * VELO;
+	pos.y = sin(angle_to_rad(new_angle)) * VELO;
+	test_pos.x = data->player.current_pos.x - pos.x;
+	test_pos.y = data->player.current_pos.y + pos.y;
+	if (is_on_grid(test_pos))
+	{
+		data->player.current_pos.x -= pos.x;
+		data->player.current_pos.y += pos.y;
+	}
+}
+
+static void	moove(int keycode)
+{
+	if (keycode == 13)
+		check_mov(180);
+	if (keycode == 1)
+		check_mov(0);
+	if (keycode == 0)
+		check_mov(-90);
+	if (keycode == 2)
+		check_mov(90);
+}
+
+int	key_routine(int keycode, t_data *data)
+{
+	printf("current keycode => %d\n", keycode);
+	if (keycode == 12)
+		data->player.fov += 1;
+	if (keycode == 14)
+		data->player.fov -= 1;
+	if (keycode == 53)
+		key_destroy(data);
 	if (keycode == 123)
 	{
 		data->player.pov += 5;
@@ -26,16 +61,8 @@ int	key_routine(int keycode, void *raw)
 		if (data->player.pov < 0)
 			data->player.pov += 360;
 	}
-	//TODO: modify this for the right pos
-	if (keycode == 13)
-		data->player.current_pos.y -= 1;
-	if (keycode == 1)
-		data->player.current_pos.y += 1;
-	if (keycode == 0)
-		data->player.current_pos.x -= 1;
-	if (keycode == 2)
-		data->player.current_pos.x += 1;
-	if (keycode == 65307)
-		key_destroy(raw);
+	if (keycode == 13 || keycode == 1 || keycode == 0 || keycode == 2)
+		moove(keycode);
+	render_frame(data);
 	return (1);
 }

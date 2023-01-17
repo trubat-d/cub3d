@@ -3,7 +3,7 @@
 int	ft_strlen_map(char *map)
 {
 	int	i;
-	int res;
+	int	res;
 
 	i = 0;
 	res = 0;
