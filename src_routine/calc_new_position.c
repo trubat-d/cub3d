@@ -40,9 +40,9 @@ int	calc_new_position(void)
 	rec.pos.x = (int)(data->player.current_pos.x - (int)(MAP_SIZE / (5 * 2)));
 	rec.pos.y = (int)(data->player.current_pos.y - (int)(MAP_SIZE / (5 * 2)));
 	mlx_put_rec(data->mlx.player_pos.img, rec,
-		(t_color){0, 255, 0, 0});
+		(t_color){0, 231, 76, 60});
 	mlx_relative_point(data->player.pov,
-		100,
+		MAP_SIZE * 3,
 		data->player.current_pos,
 		data->mlx.player_pos.img);
 	return (0);

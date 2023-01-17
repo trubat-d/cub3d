@@ -1,6 +1,6 @@
 #include "includes.h"
 
-int	is_on_grid(t_posd pos, int n, double angle)
+int	is_on_grid(t_posd pos, int n)
 {
 	t_color	color;
 	t_pos	map_pos;
@@ -14,17 +14,8 @@ int	is_on_grid(t_posd pos, int n, double angle)
 	else if (n == 2)
 		color.b = 0;
 	map = data->mlx.map.mapping;
-	if (angle < 180 && angle > 0)
-		map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
-	else
-		map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
-	if (angle < 90 || angle > 270)
-		map_pos.x = (int)floor(pos.x / (double)MAP_SIZE);
-	else
-		map_pos.x = (int)ceil(pos.x / (double)MAP_SIZE);
-
-
-
+	map_pos.y = (int)floor(pos.y / (double)MAP_SIZE);
+	map_pos.x = (int)floor(pos.x / (double)MAP_SIZE);
 	if (map_pos.y >= data->mlx.map.row
 		|| map_pos.x >= data->mlx.map.col
 		|| map_pos.y < 0
@@ -32,9 +23,9 @@ int	is_on_grid(t_posd pos, int n, double angle)
 		return (0);
 	if (map[map_pos.y][map_pos.x] != 0)
 		color.g = 255;
-	mlx_print_point((t_posd){pos.x, pos.y},
-		get_data(NULL)->mlx.player_pos.img,
-		color);
+//	mlx_print_point((t_posd){pos.x, pos.y},
+//		get_data(NULL)->mlx.player_pos.img,
+//		color);
 	return (map[map_pos.y][map_pos.x] == 0);
 }
 
@@ -44,8 +35,8 @@ double	get_len_pos(t_posd pos)
 	t_posd	calc;
 
 	player_pos = get_data(NULL)->player.current_pos;
-	calc.x = pow(player_pos.x - pos.x, 2);
-	calc.y = pow(player_pos.y - pos.y, 2);
+	calc.x = pow(absd(player_pos.x - pos.x), 2);
+	calc.y = pow(absd(player_pos.y - pos.y), 2);
 	return (sqrt(calc.x + calc.y));
 }
 
@@ -77,6 +68,6 @@ void	get_first_vertical(t_posd *pos, double angle)
 	else
 		pos->x += MAP_SIZE;
 	pos->y = data->player.current_pos.x - pos->x;
-	pos->y = floor(pos->y * tan(angle_to_rad(angle)));
-	pos->y += data->player.current_pos.y;
+	pos->y = pos->y * tan(angle_to_rad(angle));
+	pos->y = data->player.current_pos.y + pos->y;
 }

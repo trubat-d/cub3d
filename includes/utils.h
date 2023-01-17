@@ -52,6 +52,8 @@ void		mlx_put_pixel(t_img img, int x, int y, int color);
 int			create_color(t_color color);
 int			mlx_relative_point(double angle, double distance, t_posd current,
 				t_img img);
+int			mlx_relative_point_map(double angle, double distance, t_posd current,
+				t_color color);
 int			mlx_print_point(t_posd current, t_img img, t_color color);
 
 double		angle_to_rad(double angle);

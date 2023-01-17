@@ -41,6 +41,9 @@ static int	parse_map(void)
 	rec.width = MAP_SIZE - 2;
 	rec.heigth = MAP_SIZE - 2;
 	data = get_data(NULL);
+	mlx_put_rec(data->mlx.map.map_img,
+		(t_rec){{0, 0}, data->mlx.map.map_img.width, data->mlx.map.map_img.height},
+		(t_color){0, 200, 200, 200});
 	while (y < data->mlx.map.row)
 	{
 		x = 0;
@@ -87,15 +90,14 @@ int	init_mlx(void)
 
 	data = get_data(NULL);
 	data->mlx.win = mlx_new_window(data->mlx.mlx, WIDTH, HEIGHT, NAME);
-	mlx_hook(data->mlx.win, 2, 1L << 0, key_routine, &data);
-	mlx_hook(data->mlx.win, 17, 0, key_destroy, &data);
+	mlx_hook(data->mlx.win, 2, 1L << 0, key_routine, data);
+	mlx_hook(data->mlx.win, 17, 0, key_destroy, data);
 	if (create_background() || create_map())
 	{
 		free_mlx();
 		return (1);
 	}
-	render_frame(data);
-	//mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
+	mlx_loop_hook(data->mlx.mlx, render_frame, (void *)data);
 	mlx_loop(data->mlx.mlx);
 	return (0);
 }

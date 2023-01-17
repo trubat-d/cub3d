@@ -12,13 +12,13 @@ static double	find_vertical_len(double angle)
 	xa = MAP_SIZE;
 	if (angle < 90 || angle > 270)
 		ya *= -1;
-	else if (angle < 180 && angle > 0)
+	if (angle > 90 && angle < 270)
 		xa *= -1;
 	get_first_vertical(&current, angle);
-	mlx_print_point((t_posd){current.x, current.y},
-		get_data(NULL)->mlx.player_pos.img,
-		(t_color){0, 255, 255, 0});
-	while (is_on_grid(current, 1, angle))
+//	mlx_print_point((t_posd){current.x, current.y},
+//		get_data(NULL)->mlx.player_pos.img,
+//		(t_color){0, 255, 255, 0});
+	while (is_on_grid(current, 1))
 	{
 		current.x = current.x + xa;
 		current.y = current.y + ya;
@@ -38,13 +38,13 @@ static double	find_horizontal_len(double angle)
 	ya = MAP_SIZE;
 	if (angle < 180 && angle > 0)
 		ya *= -1;
-	else if (angle < 90 || angle > 270)
-		xa *= -1;
+	if (angle > 180 && angle < 360)
+		xa = -xa;
 	get_first_horizontal(&current, angle);
-	mlx_print_point((t_posd){current.x, current.y},
-		get_data(NULL)->mlx.player_pos.img,
-		(t_color){0, 255, 0, 0});
-	while (is_on_grid(current, 2, angle))
+//	mlx_print_point((t_posd){current.x, current.y},
+//		get_data(NULL)->mlx.player_pos.img,
+//		(t_color){0, 255, 0, 0});
+	while (is_on_grid(current, 2))
 	{
 		current.x = current.x + xa;
 		current.y = current.y + ya;

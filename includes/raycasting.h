@@ -30,6 +30,6 @@ void	get_first_horizontal(t_posd *pos, double angle);
 void	get_first_vertical(t_posd *pos, double angle);
 int		calc_projection_plane(void);
 int		raytracing_plane(void);
-int		is_on_grid(t_posd pos, int n, double angle);
+int		is_on_grid(t_posd pos, int n);
 
 #endif
