@@ -1,9 +1,10 @@
 SO ./asset/NORD.xpm
-F 77,90,53
-C 163,80,030
 WE ./asset/SUD.xpm
 NO ./asset/EST.xpm
 EA ./asset/WEST.xpm
+
+F 77,90,53
+C 163,80,030
 
 
 11111111111111

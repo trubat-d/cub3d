@@ -49,8 +49,7 @@ ifndef DEBUG
 	DEBUG			= 0
 endif
 
-DEBUGING			= -g3
-#-fsanitize=address
+DEBUGING			= -g3 -fsanitize=address
 CFLAGS				= -Wall -Wextra -Werror
 
 

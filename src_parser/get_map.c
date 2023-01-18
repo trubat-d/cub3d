@@ -85,6 +85,8 @@ int	parse_current_map(char **map)
 		fill_map(data->mlx.map.mapping[y], map[y], y);
 		y++;
 	}
+	if (data->player.pov == -1)
+		return (1);
 	return (0);
 }
 

@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	{
 		free_mlx();
 		free_all();
-		return (1);
+		exit (1);
 	}
 	free_mlx();
 	free_all();

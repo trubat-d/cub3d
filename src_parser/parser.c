@@ -109,6 +109,7 @@ int	init_map(void)
 	data->mlx.mlx = mlx_init();
 	data->mlx.background.ceiling.b = -1;
 	data->mlx.background.floor.b = -1;
+	data->player.pov = -1;
 	if (open_file(&fd, data->file_map)
 		|| set_texture(fd, &buff)
 		|| set_addr()

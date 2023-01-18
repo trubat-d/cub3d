@@ -24,17 +24,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
-      <change afterPath="$PROJECT_DIR$/src_parser/parser_utils.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/backroom.cub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/invalid_asset.cub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/invalid_color.cub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maps/small.cub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/medium.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/get_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/get_map.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.excalidraw" beforeDir="false" />
     </list>
-    <list id="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" name="Changes by trubat-d" comment="">
-      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_raytracing/texture_draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/texture_draw.c" afterDir="false" />
-    </list>
+    <list id="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" name="Changes by trubat-d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +114,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "/Users/jerdos-s/prog/42_cube3d/asset",
+    "last_opened_file_path": "/Users/jerdos-s/prog/42_cube3d/maps",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,9 +133,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maps" />
       <recent name="$PROJECT_DIR$/asset" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/maps" />
       <recent name="$PROJECT_DIR$/src_mlxutils" />
       <recent name="$PROJECT_DIR$/src_parser" />
       <recent name="$PROJECT_DIR$/asset" />
@@ -143,6 +147,8 @@
     <option name="myCommands">
       <command value="expr 90 +45" />
       <command value="expr 90 + 45" />
+      <command value="ls" />
+      <command value="make" />
     </option>
   </component>
   <component name="RunManager" selected="Makefile Application.all">
@@ -151,7 +157,7 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="map.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="maps/medium.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42_cube3d" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/cube3d">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -275,7 +281,7 @@
       <workItem from="1673992315708" duration="135000" />
       <workItem from="1673992455546" duration="1981000" />
       <workItem from="1674051696834" duration="1206000" />
-      <workItem from="1674052918584" duration="11854000" />
+      <workItem from="1674052918584" duration="13507000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
