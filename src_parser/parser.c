@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/18 19:40:33 by jerdos-s          #+#    #+#             */
+/*   Updated: 2023/01/18 19:40:34 by jerdos-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "parser.h"
 
 static int	set_color(char *buff)
@@ -83,27 +95,6 @@ static int	set_map(int fd, char **buff)
 		return (1);
 	}
 	free_map(map);
-	return (0);
-}
-
-static int	set_addr(void)
-{
-	t_data	*data;
-	t_img	*current;
-
-	data = get_data(NULL);
-	current = &data->mlx.map.we_img;
-	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
-			&(current->line_length), &(current->endian));
-	current = &data->mlx.map.so_img;
-	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
-			&(current->line_length), &(current->endian));
-	current = &data->mlx.map.no_img;
-	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
-			&(current->line_length), &(current->endian));
-	current = &data->mlx.map.ea_img;
-	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
-			&(current->line_length), &(current->endian));
 	return (0);
 }
 

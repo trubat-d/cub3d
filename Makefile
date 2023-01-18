@@ -23,7 +23,7 @@ PATH_UTIL			= src_util/
 PATH_OBJ			= objs/
 
 HEADER				= 	data.h includes.h parser.h routine.h raycasting.h garbage.h utils.h
-SRC_PARSER			= 	parser.c valid_arg.c get_map.c file.c ft_strmap.c fill_map.c
+SRC_PARSER			= 	parser.c valid_arg.c get_map.c file.c ft_strmap.c fill_map.c parser_utils.c
 SRC_ROUTINE			= 	routine.c init_mlx.c render_frame.c key.c calc_new_position.c
 SRC_RAYTRACING		= 	raytracing.c calc_projection_plane.c short_len.c short_len_utils.c texture_draw.c
 SRC_GARBAGE			= 	garbage.c free.c malloc.c

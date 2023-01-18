@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   texture_draw.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/18 19:41:21 by jerdos-s          #+#    #+#             */
+/*   Updated: 2023/01/18 19:41:21 by jerdos-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes.h"
 
 static void	draw_line(int len, t_img img, int x, int off)
@@ -11,7 +23,8 @@ static void	draw_line(int len, t_img img, int x, int off)
 	data = get_data(NULL);
 	while (y < len)
 	{
-		color = get_color(img, (int)floor((off * img.height) / (double)MAP_SIZE), (int)floor((y * img.width) / (double)len));
+		color = get_color(img, (int)floor((off * img.height) / \
+		(double)MAP_SIZE), (int)floor((y * img.width) / (double)len));
 		y_off = (int)(HEIGHT - len) / 2;
 		mlx_put_pixel(data->mlx.projection.img, x, y + y_off, color);
 		y++;

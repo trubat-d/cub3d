@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mlx_print_point.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/18 19:41:33 by jerdos-s          #+#    #+#             */
+/*   Updated: 2023/01/18 19:41:34 by jerdos-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes.h"
 
 int	mlx_relative_point_map(double angle, double distance, t_posd current,

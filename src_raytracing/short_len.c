@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   short_len.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jerdos-s <jerdos-s@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/18 19:41:08 by jerdos-s          #+#    #+#             */
+/*   Updated: 2023/01/18 19:41:08 by jerdos-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes.h"
 
 static double	find_vertical_len(double angle, int *vertical_off)
@@ -62,25 +74,15 @@ double	find_short_len(double angle)
 	if (horizontal_len < vertical_len)
 	{
 		data->player.offset = horizontal_off;
+		data->player.face = SO * (angle < 180) + NO * (angle >= 180);
 		if (angle > 0 && angle < 180)
-			data->player.face = SO;
-		else
-		{
 			data->player.offset = MAP_SIZE - data->player.offset - 1;
-			data->player.face = NO;
-		}
+		return (horizontal_len);
 	}
-	else
-	{
-		data->player.offset = vertical_off;
-		if (angle > 90 && angle < 270)
-		{
-			data->player.offset = MAP_SIZE - data->player.offset - 1;
-			data->player.face = WE;
-		}
-		else
-			data->player.face = EA;
-	}
-	return ((vertical_len < horizontal_len) * vertical_len
-		+ (vertical_len > horizontal_len) * horizontal_len);
+	data->player.offset = vertical_off;
+	data->player.face = WE * (angle > 90 && angle < 270) \
+	+ EA * !(angle > 90 && angle < 270);
+	if (angle > 90 && angle < 270)
+		data->player.offset = MAP_SIZE - data->player.offset - 1;
+	return (vertical_len);
 }
