@@ -9,7 +9,9 @@ int	ft_strlen_map(char *map)
 	res = 0;
 	while (map[i])
 	{
-		if (map[i] == ' ' || map[i] == 'N' || map[i] == '1' || map[i] == '0')
+		if (map[i] == ' '
+			|| map[i] == 'N' || map[i] == 'S' || map[i] == 'W' || map[i] == 'E'
+			|| map[i] == '1' || map[i] == '0')
 			res++;
 		else if (map[i] == '\t')
 			res += 4;

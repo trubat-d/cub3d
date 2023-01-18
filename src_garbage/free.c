@@ -5,8 +5,7 @@ int	free_node(t_malloc *current)
 	if (current->content)
 		free(current->content);
 	current->content = NULL;
-	if (!current)
-		free(current);
+	free(current);
 	current = NULL;
 	return (0);
 }

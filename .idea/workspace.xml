@@ -24,8 +24,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" name="Changes" comment="finish parsing and add start raycasting">
+      <change afterPath="$PROJECT_DIR$/asset/EST.xpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/SUD.xpm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/WEST.xpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/NORD.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/includes.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/includes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/raycasting.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/raycasting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/map.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlx_macos/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/mlx_macos/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_garbage/free.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_garbage/free.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_mlxutils/mlx_utils.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_parser/fill_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/fill_map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/ft_strmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/ft_strmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_parser/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_parser/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/raytracing.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/raytracing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/init_mlx.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/init_mlx.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_routine/routine.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_routine/routine.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.excalidraw" beforeDir="false" afterPath="$PROJECT_DIR$/test.excalidraw" afterDir="false" />
+    </list>
+    <list id="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" name="Changes by trubat-d" comment="">
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_raytracing/short_len.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_raytracing/short_len.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +77,31 @@
         <option name="url" value="git@github.com:0xOnyx/42_cube3d.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/includes/utils.h">
+      <ranges>
+        <range start1="51" end1="51" start2="51" end2="52" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+        <range start1="57" end1="57" start2="58" end2="59" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Makefile">
+      <ranges>
+        <range start1="27" end1="28" start2="27" end2="28" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+        <range start1="51" end1="52" start2="51" end2="53" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src_raytracing/short_len.c">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="3" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+        <range start1="22" end1="22" start2="22" end2="23" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+        <range start1="25" end1="26" start2="26" end2="27" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+        <range start1="45" end1="45" start2="46" end2="47" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+        <range start1="51" end1="51" start2="53" end2="54" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+        <range start1="52" end1="52" start2="55" end2="57" changelist="ae2ac1b3-0c6e-4750-a7d3-94cdbf963a58" />
+        <range start1="53" end1="55" start2="58" end2="83" changelist="f73b6eca-1f2c-47bd-82d8-6b66e73ab76d" />
+      </ranges>
+    </file>
   </component>
   <component name="MakefileLocalSettings">
     <option name="availableProjects">
@@ -104,7 +155,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "/Users/jerdos-s/prog/42_cube3d",
+    "last_opened_file_path": "/Users/jerdos-s/prog/42_cube3d/asset",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,6 +173,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/asset" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src_mlxutils" />
       <recent name="$PROJECT_DIR$/src_parser" />
@@ -262,7 +316,9 @@
       <workItem from="1673901655225" duration="310000" />
       <workItem from="1673958784955" duration="30862000" />
       <workItem from="1673992315708" duration="135000" />
-      <workItem from="1673992455546" duration="1678000" />
+      <workItem from="1673992455546" duration="1981000" />
+      <workItem from="1674051696834" duration="1206000" />
+      <workItem from="1674052918584" duration="11209000" />
     </task>
     <task id="LOCAL-00001" summary="finish parsing and add start raycasting">
       <created>1672171373940</created>
@@ -316,6 +372,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src_garbage/free.c</url>
+          <line>40</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

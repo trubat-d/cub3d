@@ -49,12 +49,14 @@ int			size_nbr(int nbr);
 
 void		mlx_put_rec(t_img img, t_rec rec, t_color color);
 void		mlx_put_pixel(t_img img, int x, int y, int color);
+int			get_color(t_img img, int x, int y);
 int			create_color(t_color color);
 int			mlx_relative_point(double angle, double distance, t_posd current,
 				t_img img);
 int			mlx_relative_point_map(double angle, double distance, t_posd current,
 				t_color color);
 int			mlx_print_point(t_posd current, t_img img, t_color color);
+void		draw_texture(double len_line, int current_col);
 
 double		angle_to_rad(double angle);
 double		rad_to_angle(double rad);

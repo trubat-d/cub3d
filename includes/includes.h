@@ -5,7 +5,7 @@
 # define HEIGHT 1080
 # define MAP_SIZE 20
 # define DEFAULT_FOV 60
-# define VELO 1
+# define VELO 2
 
 # include <unistd.h>
 # include <fcntl.h>

@@ -16,12 +16,22 @@ typedef struct s_plane
 	int		row;
 }	t_plane;
 
+enum e_face
+{
+	NO,
+	SO,
+	WE,
+	EA,
+};
+
 typedef struct	s_player
 {
-	t_posd	current_pos;
-	t_plane	projection;
-	double	pov;
-	int		fov;
+	t_posd		current_pos;
+	t_plane		projection;
+	enum e_face	face;
+	int		offset;
+	double		pov;
+	int			fov;
 }	t_player;
 
 double	get_len_pos(t_posd pos);

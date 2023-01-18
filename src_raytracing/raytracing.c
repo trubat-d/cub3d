@@ -13,24 +13,24 @@ static double	correct_fisheye(double current_angle)
 	return (cos(angle_to_rad(fisheye)));
 }
 
-static void	draw_line(double current_line, int current_col)
-{
-	double	len_line;
-	t_data	*data;
-	t_rec	rec;
-
-	data = get_data(NULL);
-	len_line = MAP_SIZE / current_line;
-	len_line *= data->player.projection.distance;
-	rec.width = 1;
-	rec.heigth = (int)len_line;
-	rec.pos.x = current_col;
-	if (rec.heigth >= HEIGHT)
-		rec.pos.y = 0;
-	else
-		rec.pos.y = (int)(HEIGHT - rec.heigth) / 2;
-	mlx_put_rec(data->mlx.projection.img, rec, (t_color){0, 20, 20, 20});
-}
+//static void	draw_line(double current_line, int current_col)
+//{
+//	double	len_line;
+//	t_data	*data;
+//	t_rec	rec;
+//
+//	data = get_data(NULL);
+//	len_line = MAP_SIZE / current_line;
+//	len_line *= data->player.projection.distance;
+//	rec.width = 1;
+//	rec.heigth = (int)len_line;
+//	rec.pos.x = current_col;
+//	if (rec.heigth >= HEIGHT)
+//		rec.pos.y = 0;
+//	else
+//		rec.pos.y = (int)(HEIGHT - rec.heigth) / 2;
+//	mlx_put_rec(data->mlx.projection.img, rec, (t_color){0, 20, 20, 20});
+//}
 
 static int	create_new_image(void)
 {
@@ -96,7 +96,7 @@ int	raytracing_plane(void)
 			data->player.current_pos,
 			(t_color){0, 142, 68, 173});
 		current_len *= fisheye;
-		draw_line(current_len, data->player.projection.col - current_col);
+		draw_texture(current_len, data->player.projection.col - current_col);
 		current_col++;
 	}
 	return (0);

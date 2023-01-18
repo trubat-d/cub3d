@@ -95,7 +95,6 @@ int	init_mlx(void)
 		free_mlx();
 		return (1);
 	}
-	data->player.pov = 90;
 	render_frame(data);
 	mlx_loop(data->mlx.mlx);
 	return (0);

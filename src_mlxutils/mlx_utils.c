@@ -19,3 +19,18 @@ int	create_color(t_color color)
 {
 	return (color.t << 24 | color.r << 16 | color.g << 8 | color.b);
 }
+
+int	get_color(t_img img, int x, int y)
+{
+	char	*dst;
+
+	dst = img.addr;
+	if (!dst)
+		return (0);
+	if (x < 0 || y < 0)
+		return (0);
+	if (x >= img.width || y >= img.height)
+		return (0);
+	dst += y * img.line_length + x * (img.bits_per_pixel / 8);
+	return (*(int *)dst);
+}

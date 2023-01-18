@@ -16,11 +16,13 @@ static void	condition_fill(int *tab, char c, t_pos pos, int *fill_x)
 		while (tmp++ < 4)
 			tab[(*fill_x)++] = -1;
 	}
-	else if (c == 'N')
+	else if (c == 'N' || c == 'S' || c == 'W' || c == 'E')
 	{
 		tab[(*fill_x)++] = 0;
 		data->mlx.player_pos.pos_player.x = pos.x * MAP_SIZE + MAP_SIZE / 2;
 		data->mlx.player_pos.pos_player.y = pos.y * MAP_SIZE + MAP_SIZE / 2;
+		data->player.pov = (c == 'N') * 90 + (c == 'S') * 270
+			+ (c == 'W') * 180 + (c == 'E');
 	}
 }
 

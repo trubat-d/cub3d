@@ -10,6 +10,7 @@ int	main(int argc, char **argv)
 		|| init_map()
 		|| init_mlx())
 	{
+		free_mlx();
 		free_all();
 		return (1);
 	}

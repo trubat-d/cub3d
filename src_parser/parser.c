@@ -10,7 +10,8 @@ static int	set_color(char *buff)
 	color.r = ft_atoi(buff);
 	color.g = ft_atoi(buff + size_nbr(color.r) + 2);
 	color.b = ft_atoi(buff + size_nbr(color.r) + size_nbr(color.g) + 3);
-	if (color.r == -1 || color.g == -1 || color.b == -1)
+	if (color.r > 255 || color.b > 255 || color.g > 255
+		|| color.r == -1 || color.g == -1 || color.b == -1)
 		return (-1);
 	if (buff[0] == 'F')
 		ft_memcpy(&data->mlx.background.floor, &color, sizeof(t_color));
@@ -45,7 +46,7 @@ static int	set_texture(int fd, char **buff)
 {
 	char	*res;
 
-	while (!ft_readline(fd, buff, &res) && check_is_set(1))
+	while (!ft_readline(fd, buff, &res) && check_is_set(3))
 	{
 		if (!ft_strncmp("NO", res, 2)
 			|| !ft_strncmp("SO", res, 2)
@@ -59,16 +60,16 @@ static int	set_texture(int fd, char **buff)
 			|| !ft_strncmp("C", res, 1))
 		{
 			if (set_color(res))
-				return (1);
+				return ((int)ft_putstr_fd(2, "[ERROR]\terror color\n") + 1);
 		}
 		del_malloc(res);
 	}
-	if (check_is_set(1))
-		return (1);
+	if (check_is_set(3))
+		return ((int)ft_putstr_fd(2, "[ERROR]\terror texture\n") + 1);
 	return (0);
 }
 
-int	set_map(int fd, char **buff)
+static int	set_map(int fd, char **buff)
 {
 	char	**map;
 
@@ -81,6 +82,28 @@ int	set_map(int fd, char **buff)
 		free_map(map);
 		return (1);
 	}
+	free_map(map);
+	return (0);
+}
+
+static int	set_addr(void)
+{
+	t_data	*data;
+	t_img	*current;
+
+	data = get_data(NULL);
+	current = &data->mlx.map.we_img;
+	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
+			&(current->line_length), &(current->endian));
+	current = &data->mlx.map.so_img;
+	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
+			&(current->line_length), &(current->endian));
+	current = &data->mlx.map.no_img;
+	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
+			&(current->line_length), &(current->endian));
+	current = &data->mlx.map.ea_img;
+	current->addr = mlx_get_data_addr(current->img, &(current->bits_per_pixel),
+			&(current->line_length), &(current->endian));
 	return (0);
 }
 
@@ -97,6 +120,7 @@ int	init_map(void)
 	data->mlx.background.floor.b = -1;
 	if (open_file(&fd, data->file_map)
 		|| set_texture(fd, &buff)
+		|| set_addr()
 		|| set_map(fd, &buff))
 		return (1);
 	if (buff)
